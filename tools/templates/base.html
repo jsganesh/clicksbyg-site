@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="$csp">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>$title</title>
+  <meta name="description" content="$desc">
+  <link rel="canonical" href="https://clicksbyg.com$url">
+  <meta property="og:title" content="$title">
+  <meta property="og:description" content="$desc">
+  <meta property="og:type" content="website">
+  $og
+  <link rel="stylesheet" href="/assets/gallery.css">
+  <link rel="stylesheet" href="/assets/photos.css">
+  <script src="/assets/gallery.js" defer></script>
+</head>
+<body class="gallery $body_class">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="g-header">
+    <a class="g-brand" href="/">$name</a>
+    <nav>$links</nav>
+  </header>
+  <main id="main">
+$body
+  </main>
+  <footer class="g-footer">
+    <div class="g-footer-in">
+      <p>© $span $name. All photographs are copyright and may not be
+      used without a licence.</p>
+      <p class="g-footer-links">
+        <a href="/licensing/">Prints &amp; licensing</a>
+        <a href="/about/">About</a>
+        $insta
+        <span class="sep">Apps:</span>
+        <a href="/philatally/">PhilaTally</a>
+        <a href="/philatally/support/">Support</a>
+        <a href="/philatally/privacy/">Privacy</a>
+        <a href="/stampalbum-pro/">StampAlbum Pro</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

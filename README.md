@@ -12,7 +12,8 @@ the photo pages are generated locally and committed.
 - `img/`: web copies (640/1280/2048 px, WebP + JPEG, metadata stripped)
 - `assets/photos.css`: per-photo aspect ratio and placeholder colour
 
-Don't edit these by hand. Change `photos/site.json` and run the script.
+Don't edit these by hand. Change `photos/site.json` or the HTML in
+`tools/templates/` and run the script.
 
 ### Adding photos
 
@@ -23,7 +24,9 @@ Don't edit these by hand. Change `photos/site.json` and run the script.
    `print_url`, `license_url`). Order in the list is the order on the site;
    the first `"featured": true` photo is the home-page hero.
 3. Run `python3 tools/publish.py` (needs Pillow: `pip install -r requirements.txt`).
-4. Preview, then commit and push.
+4. Run `python3 tools/check_site.py`: it checks metadata is stripped and
+   every link and image resolves.
+5. Preview, then commit and push.
 
 `print_url` / `license_url` can be a Stripe Payment Link, a Lemon Squeezy or
 Gumroad product, or a print-on-demand shop page. Without them, the buttons

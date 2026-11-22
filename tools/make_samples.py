@@ -31,52 +31,60 @@ def ridge(w, h, base, rough, rng):
     return [(i * w / n, base - ys[i] * rough * h) for i in range(n + 1)]
 
 
-def scene(name, size, sky_top, sky_bottom, sun, sun_pos, layers, near, far, water=False, seed=1):
-    rng = random.Random(seed)
-    w, h = size
+def sky(size, top, bottom):
     img = Image.new("RGB", size)
     d = ImageDraw.Draw(img)
-    for y in range(h):
-        d.line([(0, y), (w, y)], fill=lerp(sky_top, sky_bottom, y / h))
+    for y in range(size[1]):
+        d.line([(0, y), (size[0], y)], fill=lerp(top, bottom, y / size[1]))
+    return img
 
-    if sun:
-        glow = Image.new("RGB", size, (0, 0, 0))
-        gd = ImageDraw.Draw(glow)
-        cx, cy = sun_pos[0] * w, sun_pos[1] * h
-        r = min(w, h) * 0.05
-        gd.ellipse([cx - r * 6, cy - r * 6, cx + r * 6, cy + r * 6], fill=tuple(c // 3 for c in sun))
-        glow = glow.filter(ImageFilter.GaussianBlur(r * 3))
-        img = ImageChops.add(img, glow)
-        d = ImageDraw.Draw(img)
-        d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=sun)
 
+def add_sun(img, sun, pos):
+    w, h = img.size
+    cx, cy, r = pos[0] * w, pos[1] * h, min(w, h) * 0.05
+    glow = Image.new("RGB", img.size)
+    ImageDraw.Draw(glow).ellipse([cx - r * 6, cy - r * 6, cx + r * 6, cy + r * 6],
+                                 fill=tuple(c // 3 for c in sun))
+    img = ImageChops.add(img, glow.filter(ImageFilter.GaussianBlur(r * 3)))
+    ImageDraw.Draw(img).ellipse([cx - r, cy - r, cx + r, cy + r], fill=sun)
+    return img
+
+
+def add_ridges(img, layers, near, far, water, rng):
+    w, h = img.size
+    d = ImageDraw.Draw(img)
     horizon = 0.55 if water else 0.62
     for i in range(layers):
         t = i / max(1, layers - 1)
-        base = h * (horizon - 0.18 + 0.18 * t + (0.25 * t if not water else 0.05 * t))
+        base = h * (horizon - 0.18 + 0.18 * t + (0.05 if water else 0.25) * t)
         pts = ridge(w, h, base, 0.12 - 0.05 * t, rng)
-        color = lerp(far, near, t)
-        d.polygon(pts + [(w, h), (0, h)], fill=color)
+        d.polygon(pts + [(w, h), (0, h)], fill=lerp(far, near, t))
 
+
+def add_water(img, near, ripple, rng):
+    w, h = img.size
+    top = int(h * 0.66)
+    refl = img.crop((0, 0, w, top)).transpose(Image.FLIP_TOP_BOTTOM)
+    refl = refl.resize((w, h - top)).filter(ImageFilter.GaussianBlur(6))
+    img.paste(Image.blend(refl, Image.new("RGB", refl.size, near), 0.45), (0, top))
+    d = ImageDraw.Draw(img)
+    for _ in range(140):
+        y, x, ln = rng.uniform(top, h), rng.uniform(0, w), rng.uniform(20, 160)
+        d.line([(x, y), (x + ln, y)], fill=ripple, width=1)
+
+
+def scene(name, size, sky_top, sky_bottom, sun, sun_pos, layers, near, far, water=False, seed=1):
+    rng = random.Random(seed)
+    img = sky(size, sky_top, sky_bottom)
+    if sun:
+        img = add_sun(img, sun, sun_pos)
+    add_ridges(img, layers, near, far, water, rng)
     if water:
-        top = int(h * 0.66)
-        refl = img.crop((0, 0, w, top)).transpose(Image.FLIP_TOP_BOTTOM)
-        refl = refl.resize((w, h - top)).filter(ImageFilter.GaussianBlur(6))
-        dark = Image.new("RGB", refl.size, near)
-        img.paste(Image.blend(refl, dark, 0.45), (0, top))
-        d = ImageDraw.Draw(img)
-        for _ in range(140):
-            y = rng.uniform(top, h)
-            x = rng.uniform(0, w)
-            ln = rng.uniform(20, 160)
-            d.line([(x, y), (x + ln, y)], fill=lerp(sky_bottom, near, 0.4), width=1)
-
-    noise = Image.effect_noise(size, 18).convert("RGB")
-    img = Image.blend(img, noise, 0.04)
+        add_water(img, near, lerp(sky_bottom, near, 0.4), rng)
+    img = Image.blend(img, Image.effect_noise(size, 18).convert("RGB"), 0.04)  # film grain
     OUT.mkdir(parents=True, exist_ok=True)
     img.save(OUT / f"{name}.jpg", quality=90)
     print("wrote", OUT / f"{name}.jpg")
-
 
 L, P, W = (3000, 2000), (2000, 3000), (3600, 1800)
 scene("blue-ridges", L, (196, 210, 226), (236, 230, 222), None, None, 6, (28, 44, 70), (170, 188, 210), seed=3)
