@@ -1,0 +1,132 @@
+{
+  "site": {
+    "name": "Clicks by G",
+    "tagline": "Light, land and water, photographed slowly.",
+    "photographer": "G",
+    "contact_email": "",
+    "instagram": "",
+    "copyright_start": 2026,
+    "about": [
+      "I'm G, a photographer drawn to quiet light: the hour before sunrise, weather rolling in off the sea, mountains turning blue at dusk.",
+      "Every photograph here is available as a fine-art print or for licensing. If you'd like one on your wall, or in your project, get in touch."
+    ]
+  },
+  "collections": [
+    {
+      "slug": "mountains",
+      "title": "Mountains",
+      "blurb": "Ridges, haze and the long blue hour.",
+      "cover": "blue-ridges"
+    },
+    {
+      "slug": "coast",
+      "title": "Coast",
+      "blurb": "Tides, weather and the edge of the land.",
+      "cover": "low-tide-gold"
+    },
+    {
+      "slug": "after-dark",
+      "title": "After dark",
+      "blurb": "When the sun is gone and the colour stays.",
+      "cover": "violet-hour"
+    }
+  ],
+  "photos": [
+    {
+      "slug": "blue-ridges",
+      "file": "samples/blue-ridges.jpg",
+      "title": "Blue ridges",
+      "collection": "mountains",
+      "alt": "Layers of blue mountain ridges fading into haze under a pale sky",
+      "caption": "Sample image. Replace with your own photo and story.",
+      "place": "Sample location",
+      "date": "2026",
+      "camera": "",
+      "lens": "",
+      "settings": "",
+      "featured": true,
+      "print_url": "",
+      "license_url": ""
+    },
+    {
+      "slug": "low-tide-gold",
+      "file": "samples/low-tide-gold.jpg",
+      "title": "Low tide, gold",
+      "collection": "coast",
+      "alt": "A low sun over still water with dark headlands either side",
+      "caption": "Sample image. Replace with your own photo and story.",
+      "place": "Sample location",
+      "date": "2026"
+    },
+    {
+      "slug": "violet-hour",
+      "file": "samples/violet-hour.jpg",
+      "title": "Violet hour",
+      "collection": "after-dark",
+      "alt": "Dark mountain silhouettes under a violet and rose evening sky",
+      "caption": "Sample image. Replace with your own photo and story.",
+      "place": "Sample location",
+      "date": "2026"
+    },
+    {
+      "slug": "first-light",
+      "file": "samples/first-light.jpg",
+      "title": "First light",
+      "collection": "mountains",
+      "alt": "Peach-coloured dawn light behind a tall mountain, portrait format",
+      "caption": "Sample image.",
+      "place": "Sample location",
+      "date": "2026"
+    },
+    {
+      "slug": "sea-fret",
+      "file": "samples/sea-fret.jpg",
+      "title": "Sea fret",
+      "collection": "coast",
+      "alt": "Grey-green headlands dissolving into sea mist",
+      "caption": "Sample image.",
+      "place": "Sample location",
+      "date": "2026"
+    },
+    {
+      "slug": "long-valley",
+      "file": "samples/long-valley.jpg",
+      "title": "Long valley",
+      "collection": "mountains",
+      "alt": "A wide panorama of green and teal hills under a soft sky",
+      "caption": "Sample image.",
+      "place": "Sample location",
+      "date": "2026"
+    },
+    {
+      "slug": "ember",
+      "file": "samples/ember.jpg",
+      "title": "Ember",
+      "collection": "after-dark",
+      "alt": "A deep red sunset glow behind black ridges",
+      "caption": "Sample image.",
+      "place": "Sample location",
+      "date": "2026"
+    },
+    {
+      "slug": "harbour-dusk",
+      "file": "samples/harbour-dusk.jpg",
+      "title": "Harbour, dusk",
+      "collection": "coast",
+      "alt": "Calm water reflecting a dusky blue and orange sky, portrait format",
+      "caption": "Sample image.",
+      "place": "Sample location",
+      "date": "2026"
+    },
+    {
+      "slug": "moonrise",
+      "file": "samples/moonrise.jpg",
+      "title": "Moonrise",
+      "collection": "after-dark",
+      "alt": "A pale moon rising over dark blue mountains",
+      "caption": "Sample image.",
+      "place": "Sample location",
+      "date": "2026"
+    }
+  ]
+}

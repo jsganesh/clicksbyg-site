@@ -1,0 +1,3 @@
+# Full-size exports stay local (or on the Pi). Only web copies in img/ are published.
+photos/source/
+.DS_Store
