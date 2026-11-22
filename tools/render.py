@@ -25,12 +25,22 @@ def page(site, title, desc, body, current="", og_image=None, body_class="", url=
     cur = ' aria-current="page"'
     links = "".join(f'<a href="{h}"{cur if h == current else ""}>{t}</a>' for h, t in NAV)
     og = f'<meta property="og:image" content="https://clicksbyg.com{og_image}">' if og_image else ""
-    insta = (f'<a href="https://instagram.com/{e(site["instagram"])}">Instagram</a>'
-             if site.get("instagram") else "")
+    insta = f'<a href="{instagram_url(site)}" rel="me">Instagram</a>' if site.get("instagram") else ""
     canonical = f'<link rel="canonical" href="https://clicksbyg.com{url}">' if url else ""
     return fill("base.html", csp=CSP, title=title, desc=e(desc), canonical=canonical, og=og,
                 body_class=body_class, name=e(site["name"]), links=links, body=body,
                 span=_years(site["copyright_start"]), insta=insta, head=head)
+
+
+def instagram_url(site):
+    return f"https://www.instagram.com/{site['instagram']}/"
+
+
+def follow_link(site):
+    if not site.get("instagram"):
+        return ""
+    return (f'<p class="follow"><a href="{instagram_url(site)}" rel="me">More on Instagram '
+            f'<span>@{e(site["instagram"])}</span> →</a></p>')
 
 
 def _years(start):
@@ -89,6 +99,19 @@ def licensable(site, p):
         "license": "https://clicksbyg.com/licensing/",
         "acquireLicensePage": "https://clicksbyg.com/contact/",
     }
+    return ld_json(data)
+
+
+def identity(site):
+    """Ties the site to the Instagram account, so search engines treat
+    them as one photographer."""
+    data = {"@context": "https://schema.org", "@type": "Person", "name": site["name"],
+            "url": "https://clicksbyg.com/", "jobTitle": "Photographer",
+            "sameAs": [instagram_url(site)] if site.get("instagram") else []}
+    return ld_json(data)
+
+
+def ld_json(data):
     # "</" could close the script element early; JSON allows "<\/" instead.
     text = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
     return f'<script type="application/ld+json">{text}</script>'
