@@ -99,10 +99,22 @@ def check_licensable(rel, text):
     check(data.get("acquireLicensePage") and data.get("license"), f"{rel}: no licensable data")
 
 
+def check_sitemap():
+    xml = (ROOT / "sitemap.xml").read_text()
+    locs = re.findall(r"<(?:image:)?loc>https://clicksbyg\.com(/[^<]*)</", xml)
+    for path in locs:
+        check(resolves(path), f"sitemap: {path} doesn't exist")
+    pages = sum(1 for p in site_pages() if p.name == "index.html")
+    check(xml.count("<url>") == pages, f"sitemap lists {xml.count('<url>')} of {pages} pages")
+    check("Sitemap: https://clicksbyg.com/sitemap.xml" in (ROOT / "robots.txt").read_text(),
+          "robots.txt doesn't point at the sitemap")
+
+
 if __name__ == "__main__":
     check_encoding()
     check_collections()
     check_focus()
     check_pages()
+    check_sitemap()
     print("\n".join(failures) or f"ok: encoding and {sum(1 for _ in site_pages())} pages checked")
     sys.exit(1 if failures else 0)

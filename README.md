@@ -12,6 +12,10 @@ the photo pages are generated locally and committed.
 - `img/`: web copies (640/1280/2048 px, WebP + JPEG). Camera metadata and GPS are
   stripped; only artist and copyright are written in.
 
+`sitemap.xml` (every page, with each photo's image) and `robots.txt` are
+regenerated too. robots.txt turns away AI-training crawlers, matching the
+licensing terms; search engines are unaffected.
+
 Photo pages also carry schema.org licensing data, so Google Images can show
 them as licensable with a link to `/contact/`.
 - `assets/photos.css`: per-photo aspect ratio and placeholder colour
