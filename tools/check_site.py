@@ -6,6 +6,7 @@
 2. Every internal link and image on every page resolves to a file, and every
    generated page carries the CSP and no inline styles (which the CSP blocks).
 """
+import html
 import json
 import re
 import sys
@@ -15,10 +16,11 @@ from pathlib import Path
 from PIL import Image
 
 from images import COPYRIGHT, WIDTHS, credit_exif, encode, outputs
+import seo
 from publish import FOCUS, visible_collections
 
 ROOT = Path(__file__).resolve().parent.parent
-GENERATED = ("index.html", "about", "collections", "licensing", "contact", "photo")
+GENERATED = ("index.html", "404.html", "about", "collections", "licensing", "contact", "photo")
 SKIP_DIRS = {".git", ".claude", "tools", "photos", "node_modules"}
 failures = []
 
@@ -88,6 +90,22 @@ def check_pages():
             check(" style=" not in text, f"{rel}: inline style blocked by CSP")
         if rel.parts[0] == "photo":
             check_licensable(rel, text)
+        check('rel="icon"' in text, f"{rel}: no favicon link")
+        if "noindex" not in text:
+            check_search_text(rel, text)
+
+
+titles = {}
+
+
+def check_search_text(rel, text):
+    title = re.search(r"<title>(.*?)</title>", text).group(1)
+    desc = re.search(r'<meta name="description" content="([^"]*)"', text)
+    check(title not in titles, f"{rel}: same title as {titles.get(title)}")
+    titles[title] = rel
+    # Measured unescaped: "&amp;" is one character to a reader.
+    length = len(html.unescape(desc.group(1))) if desc else 0
+    check(0 < length <= seo.DESC_LIMIT, f"{rel}: description is {length} characters")
 
 
 def check_licensable(rel, text):

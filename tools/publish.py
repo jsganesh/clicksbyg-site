@@ -16,6 +16,7 @@ import sys
 from html import escape as e
 from pathlib import Path
 
+import seo
 import sitemap
 from images import credit_exif, encode, outputs, picture
 from render import (LICENSE_FORM, PRINT_FORM, collection_cards, enquire_href, fill, grid,
@@ -45,6 +46,7 @@ def load():
     data["by_coll"] = {c["slug"]: [p for p in data["photos"] if p["collection"] == c["slug"]]
                        for c in data["collections"]}
     data["collections"] = visible_collections(data)
+    data["shared"] = seo.shared_subjects(data["photos"])
     return data
 
 
@@ -91,15 +93,18 @@ def build_home(d):
                 hero_picture=picture(hero, "100vw", cls="hero-img", loading="eager", priority=True),
                 tagline=e(site["tagline"]), name=e(site["name"]), grid=grid(photos[:12]),
                 cards=collection_cards(d["collections"], d["by_slug"], d["by_coll"]))
-    write(ROOT / "index.html", page(site, f"{e(site['name'])} — photography", site["tagline"],
-                                    body, og_image=f"/img/{hero['slug']}-1280.jpg", body_class="home"))
+    write(ROOT / "index.html", page(site, e(f"{site['home_title']} | {site['name']}"),
+                                    site["description"], body,
+                                    og_image=f"/img/{hero['slug']}-1280.jpg", body_class="home"))
 
 
 def build_collections(d):
-    site, name = d["site"], e(d["site"]["name"])
+    site = d["site"]
     cards = collection_cards(d["collections"], d["by_slug"], d["by_coll"])
     write(ROOT / "collections" / "index.html", page(
-        site, f"Collections — {name}", "Photograph collections by Clicks by G.",
+        site, e(f"Photography Collections from {site['region']} | {site['name']}"),
+        seo.clip(f"Browse photographs from {site['region']} by {site['name']}: "
+                 + ", ".join(c["title"].lower() for c in d["collections"]) + f". {seo.OFFER}"),
         f'<section class="band top"><h1>Collections</h1>{cards}</section>',
         current="/collections/", url="/collections/"))
     for c in d["collections"]:
@@ -107,7 +112,8 @@ def build_collections(d):
                 f'<h1>{e(c["title"])}</h1><p class="lede">{e(c.get("blurb", ""))}</p>'
                 f'{grid(d["by_coll"][c["slug"]])}</section>')
         write(ROOT / "collections" / c["slug"] / "index.html", page(
-            site, f"{e(c['title'])} — {name}", c.get("blurb", ""), body, current="/collections/",
+            site, e(seo.collection_title(site, c)),
+            seo.collection_desc(site, c, len(d["by_coll"][c["slug"]])), body, current="/collections/",
             og_image=f"/img/{c['cover']}-1280.jpg", url=f"/collections/{c['slug']}/"))
 
 
@@ -135,9 +141,9 @@ def build_photo(d, p, coll_titles):
         license_href=e(p.get("license_url") or enquire_href(site, f"Licence: {p['title']}", LICENSE_FORM, ref)),
         pager=pager(d["by_coll"][p["collection"]], p))
     write(ROOT / "photo" / p["slug"] / "index.html", page(
-        site, f"{e(p['title'])} — {e(site['name'])}", p.get("alt") or p["title"], body,
+        site, e(seo.photo_title(site, p, d["shared"])), seo.photo_desc(p), body,
         og_image=f"/img/{p['slug']}-1280.jpg", body_class="photo-page", url=f"/photo/{p['slug']}/",
-        jsonld=licensable(site, p)))
+        head=licensable(site, p)))
 
 
 def build_about(site):
@@ -145,14 +151,16 @@ def build_about(site):
     body = (f'<section class="band top prose-g"><h1>About</h1>{paras}'
             f'<p><a class="g-btn" href="/licensing/">Prints &amp; licensing</a></p></section>')
     write(ROOT / "about" / "index.html", page(
-        site, f"About — {e(site['name'])}", "About the photographer behind Clicks by G.",
+        site, e(f"About {site['name']}, Photographer in {site['region']}"),
+        seo.clip(" ".join(site.get("about", [])[:1]) or site["description"]),
         body, current="/about/", url="/about/"))
 
 
 def build_licensing(site):
     write(ROOT / "licensing" / "index.html", page(
-        site, f"Prints &amp; licensing — {e(site['name'])}",
-        "Buy fine-art prints or license photographs by Clicks by G.",
+        site, e(f"Buy Photo Prints & License Images | {site['name']}"),
+        f"Order fine-art prints or license bird and wildlife photographs by {site['name']}: "
+        "editorial, commercial and personal use.",
         fill("licensing.html"), current="/licensing/", url="/licensing/"))
 
 
@@ -163,8 +171,21 @@ def build_contact(site):
                 print_href=e(enquire_href(site, "Print enquiry", PRINT_FORM)),
                 report_href=e(enquire_href(site, "Unlicensed use of my photo")))
     write(ROOT / "contact" / "index.html", page(
-        site, f"Contact — {e(site['name'])}", "Contact Clicks by G about prints, licensing or commissions.",
+        site, e(f"Contact {site['name']} | Prints, Licensing & Commissions"),
+        f"Request a photo licence, order a print or ask about commissions with {site['name']}.",
         body, current="/contact/", url="/contact/"))
+
+
+def build_404(d):
+    # GitHub Pages serves /404.html for any missing path, so every link is absolute.
+    body = ('<section class="band top prose-g"><h1>That page has flown off</h1>'
+            "<p>The link may be old or mistyped. The photographs are still here.</p>"
+            '<p><a class="g-btn" href="/">Back to the gallery</a> '
+            '<a class="g-btn ghost" href="/collections/">See the collections</a></p>'
+            f'{grid(d["photos"][:6])}</section>')
+    write(ROOT / "404.html", page(d["site"], e(f"Page not found | {d['site']['name']}"),
+                                  "This page doesn't exist.", body, url=None,
+                                  head='<meta name="robots" content="noindex">'))
 
 
 def build():
@@ -183,6 +204,7 @@ def build():
     build_about(d["site"])
     build_licensing(d["site"])
     build_contact(d["site"])
+    build_404(d)
     sitemap.build(ROOT, d["photos"])
     print(f"built {len(d['photos'])} photos in {len(d['collections'])} collections")
 

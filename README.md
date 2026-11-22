@@ -20,6 +20,11 @@ Photo pages also carry schema.org licensing data, so Google Images can show
 them as licensable with a link to `/contact/`.
 - `assets/photos.css`: per-photo aspect ratio and placeholder colour
 
+Page titles and descriptions come from `tools/seo.py`: species, place and
+kind of photo first, brand last, built from each photo's `species`/`place`
+and `site.region`, `site.home_title`, `site.description` and each
+collection's `kind`. `404.html` is generated too, marked noindex.
+
 Don't edit these by hand. Change `photos/site.json` or the HTML in
 `tools/templates/` and run the script.
 
