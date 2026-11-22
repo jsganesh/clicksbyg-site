@@ -5,7 +5,8 @@
 
 Makes metadata-free web copies in img/ of each export in photos/source/
 (only when the export is newer), then regenerates the home, collection,
-photo, about and licensing pages and assets/photos.css. The app pages
+photo, about, licensing and contact pages, assets/photos.css,
+sitemap.xml and robots.txt. The app pages
 (/apps/, /philatally/, /stampalbum-pro/) are hand-written and never touched.
 """
 import json
@@ -15,6 +16,7 @@ import sys
 from html import escape as e
 from pathlib import Path
 
+import sitemap
 from images import credit_exif, encode, outputs, picture
 from render import (LICENSE_FORM, PRINT_FORM, collection_cards, enquire_href, fill, grid,
                     licensable, page)
@@ -181,6 +183,7 @@ def build():
     build_about(d["site"])
     build_licensing(d["site"])
     build_contact(d["site"])
+    sitemap.build(ROOT, d["photos"])
     print(f"built {len(d['photos'])} photos in {len(d['collections'])} collections")
 
 
