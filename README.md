@@ -33,9 +33,6 @@ Don't edit these by hand. Change `photos/site.json` or the HTML in
 Gumroad product, or a print-on-demand shop page. Without them, the buttons
 email `site.contact_email`, or go to `/licensing/` if no email is set.
 
-The sample landscapes in `photos/source/samples/` are drawn by
-`tools/make_samples.py`. Replace them before going live.
-
 ## App pages (hand-written)
 
 - `/apps/`: list of apps

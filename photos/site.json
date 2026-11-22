@@ -29,7 +29,7 @@
       "slug": "landscapes",
       "title": "Landscapes",
       "blurb": "Mountains, coast and the long blue hour.",
-      "cover": "blue-ridges"
+      "cover": ""
     },
     {
       "slug": "cityscapes",
@@ -114,101 +114,6 @@
       "lens": "Sony FE 200–600mm F5.6–6.3 G OSS",
       "settings": "600mm · f/6.3 · 1/1600s · ISO 1600",
       "focus": "65% 70%"
-    },
-    {
-      "slug": "blue-ridges",
-      "file": "samples/blue-ridges.jpg",
-      "title": "Blue ridges",
-      "collection": "landscapes",
-      "alt": "Layers of blue mountain ridges fading into haze under a pale sky",
-      "caption": "Sample image. Replace with your own photo and story.",
-      "place": "Sample location",
-      "date": "2026",
-      "camera": "",
-      "lens": "",
-      "settings": "",
-      "print_url": "",
-      "license_url": ""
-    },
-    {
-      "slug": "low-tide-gold",
-      "file": "samples/low-tide-gold.jpg",
-      "title": "Low tide, gold",
-      "collection": "landscapes",
-      "alt": "A low sun over still water with dark headlands either side",
-      "caption": "Sample image. Replace with your own photo and story.",
-      "place": "Sample location",
-      "date": "2026"
-    },
-    {
-      "slug": "violet-hour",
-      "file": "samples/violet-hour.jpg",
-      "title": "Violet hour",
-      "collection": "landscapes",
-      "alt": "Dark mountain silhouettes under a violet and rose evening sky",
-      "caption": "Sample image. Replace with your own photo and story.",
-      "place": "Sample location",
-      "date": "2026"
-    },
-    {
-      "slug": "first-light",
-      "file": "samples/first-light.jpg",
-      "title": "First light",
-      "collection": "landscapes",
-      "alt": "Peach-coloured dawn light behind a tall mountain, portrait format",
-      "caption": "Sample image.",
-      "place": "Sample location",
-      "date": "2026"
-    },
-    {
-      "slug": "sea-fret",
-      "file": "samples/sea-fret.jpg",
-      "title": "Sea fret",
-      "collection": "landscapes",
-      "alt": "Grey-green headlands dissolving into sea mist",
-      "caption": "Sample image.",
-      "place": "Sample location",
-      "date": "2026"
-    },
-    {
-      "slug": "long-valley",
-      "file": "samples/long-valley.jpg",
-      "title": "Long valley",
-      "collection": "landscapes",
-      "alt": "A wide panorama of green and teal hills under a soft sky",
-      "caption": "Sample image.",
-      "place": "Sample location",
-      "date": "2026"
-    },
-    {
-      "slug": "ember",
-      "file": "samples/ember.jpg",
-      "title": "Ember",
-      "collection": "landscapes",
-      "alt": "A deep red sunset glow behind black ridges",
-      "caption": "Sample image.",
-      "place": "Sample location",
-      "date": "2026"
-    },
-    {
-      "slug": "harbour-dusk",
-      "file": "samples/harbour-dusk.jpg",
-      "title": "Harbour, dusk",
-      "collection": "landscapes",
-      "alt": "Calm water reflecting a dusky blue and orange sky, portrait format",
-      "caption": "Sample image.",
-      "place": "Sample location",
-      "date": "2026"
-    },
-    {
-      "slug": "moonrise",
-      "file": "samples/moonrise.jpg",
-      "title": "Moonrise",
-      "collection": "landscapes",
-      "alt": "A pale moon rising over dark blue mountains",
-      "caption": "Sample image.",
-      "place": "Sample location",
-      "date": "2026"
     }
   ]
 }
