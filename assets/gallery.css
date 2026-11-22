@@ -60,6 +60,8 @@ h2 { font-size: 1.5rem; margin: 2em 0 0.5em; }
 /* Hero */
 .hero { position: relative; height: 92svh; min-height: 480px; overflow: hidden; }
 .hero-img, .hero-img img { width: 100%; height: 100%; }
+/* --focus (set per photo) keeps an off-centre subject in frame when cropped. */
+.hero-img img, .c-img img, .jg-item img { object-position: var(--focus, 50% 50%); }
 .hero-img img { object-fit: cover; }
 .hero::after {
   content: ""; position: absolute; inset: 0; pointer-events: none;

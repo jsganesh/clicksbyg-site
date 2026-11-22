@@ -9,6 +9,7 @@ photo, about and licensing pages and assets/photos.css. The app pages
 (/apps/, /philatally/, /stampalbum-pro/) are hand-written and never touched.
 """
 import json
+import re
 import shutil
 import sys
 from html import escape as e
@@ -18,6 +19,7 @@ from images import encode, outputs, picture
 from render import collection_cards, enquire_href, fill, grid, page
 
 ROOT = Path(__file__).resolve().parent.parent
+FOCUS = re.compile(r"(100|\d{1,2})% (100|\d{1,2})%")
 
 
 def write(path, text):
@@ -31,6 +33,9 @@ def load():
         src = ROOT / "photos" / "source" / p["file"]
         if not src.exists():
             sys.exit(f"missing source image: {src}")
+        # focus is written into CSS, so only "x% y%" gets through.
+        if not FOCUS.fullmatch(p.setdefault("focus", "50% 50%")):
+            sys.exit(f"{p['slug']}: focus must look like \"60% 40%\", got {p['focus']!r}")
         encode(p, src, ROOT / "img")
     data["by_slug"] = {p["slug"]: p for p in data["photos"]}
     data["by_coll"] = {c["slug"]: [p for p in data["photos"] if p["collection"] == c["slug"]]
@@ -65,7 +70,8 @@ def prune_images(photos):
 def build_css(d):
     # Per-photo values live in a stylesheet so the CSP can forbid inline styles.
     write(ROOT / "assets" / "photos.css", "".join(
-        f".p-{p['slug']}{{--ar:{p['ar']};--ph:{p['bg']}}}\n" for p in d["photos"]))
+        f".p-{p['slug']}{{--ar:{p['ar']};--ph:{p['bg']};--focus:{p['focus']}}}\n"
+        for p in d["photos"]))
 
 
 def build_home(d):

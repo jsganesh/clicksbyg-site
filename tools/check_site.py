@@ -14,7 +14,7 @@ from pathlib import Path
 from PIL import Image
 
 from images import WIDTHS, encode, outputs
-from publish import visible_collections
+from publish import FOCUS, visible_collections
 
 ROOT = Path(__file__).resolve().parent.parent
 GENERATED = ("index.html", "about", "collections", "licensing", "photo")
@@ -54,6 +54,13 @@ def check_collections():
     check(shown[0]["cover"] == "a", "missing cover not replaced by first photo")
 
 
+def check_focus():
+    for ok in ("50% 50%", "0% 100%", "63% 41%"):
+        check(FOCUS.fullmatch(ok), f"focus {ok!r} wrongly rejected")
+    for bad in ("50%", "101% 0%", "50% 50%;}body{display:none", "center"):
+        check(not FOCUS.fullmatch(bad), f"focus {bad!r} wrongly accepted")
+
+
 def site_pages():
     for path in ROOT.rglob("*.html"):
         if not SKIP_DIRS & set(path.relative_to(ROOT).parts):
@@ -80,6 +87,7 @@ def check_pages():
 if __name__ == "__main__":
     check_encoding()
     check_collections()
+    check_focus()
     check_pages()
     print("\n".join(failures) or f"ok: encoding and {sum(1 for _ in site_pages())} pages checked")
     sys.exit(1 if failures else 0)
