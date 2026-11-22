@@ -2,6 +2,9 @@
   "site": {
     "name": "Clicks by G",
     "tagline": "Birds, wildlife and the places they live.",
+    "home_title": "Bird & Wildlife Photography from Tamil Nadu",
+    "description": "Fine-art bird and wildlife photographs from Tamil Nadu, India: hoopoes, kites, egrets and waders. Prints and image licensing by Clicks by G.",
+    "region": "Tamil Nadu, India",
     "photographer": "G",
     "contact_email": "philatallypro@gmail.com",
     "instagram": "",
@@ -17,25 +20,29 @@
       "slug": "birds",
       "title": "Birds",
       "blurb": "Wings, feathers and the moment before flight.",
-      "cover": "brahminy-kite-face-on"
+      "cover": "brahminy-kite-face-on",
+      "kind": "Bird"
     },
     {
       "slug": "wildlife",
       "title": "Wildlife",
       "blurb": "Animals in their own places, on their own terms.",
-      "cover": ""
+      "cover": "",
+      "kind": "Wildlife"
     },
     {
       "slug": "landscapes",
       "title": "Landscapes",
       "blurb": "Mountains, coast and the long blue hour.",
-      "cover": ""
+      "cover": "",
+      "kind": "Landscape"
     },
     {
       "slug": "cityscapes",
       "title": "Cityscapes",
       "blurb": "Streets, skylines and city light.",
-      "cover": ""
+      "cover": "",
+      "kind": "Cityscape"
     }
   ],
   "photos": [

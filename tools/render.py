@@ -20,15 +20,17 @@ def fill(template, **values):
     return Template((TEMPLATES / template).read_text()).substitute(values)
 
 
-def page(site, title, desc, body, current="", og_image=None, body_class="", url="/", jsonld=""):
+def page(site, title, desc, body, current="", og_image=None, body_class="", url="/", head=""):
+    """url=None leaves out the canonical link, for pages that shouldn't be indexed."""
     cur = ' aria-current="page"'
     links = "".join(f'<a href="{h}"{cur if h == current else ""}>{t}</a>' for h, t in NAV)
     og = f'<meta property="og:image" content="https://clicksbyg.com{og_image}">' if og_image else ""
     insta = (f'<a href="https://instagram.com/{e(site["instagram"])}">Instagram</a>'
              if site.get("instagram") else "")
-    return fill("base.html", csp=CSP, title=title, desc=e(desc), url=url, og=og,
+    canonical = f'<link rel="canonical" href="https://clicksbyg.com{url}">' if url else ""
+    return fill("base.html", csp=CSP, title=title, desc=e(desc), canonical=canonical, og=og,
                 body_class=body_class, name=e(site["name"]), links=links, body=body,
-                span=_years(site["copyright_start"]), insta=insta, jsonld=jsonld)
+                span=_years(site["copyright_start"]), insta=insta, head=head)
 
 
 def _years(start):
