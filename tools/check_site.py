@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """Check the site before pushing:  python3 tools/check_site.py
 
-1. Encoding drops metadata (GPS especially), applies camera rotation and
-   never upscales, tested on a synthetic export in a temp folder.
+1. Encoding keeps only artist and copyright (no GPS or camera details),
+   applies camera rotation and never upscales, tested on a synthetic export in a temp folder.
 2. Every internal link and image on every page resolves to a file, and every
    generated page carries the CSP and no inline styles (which the CSP blocks).
 """
+import json
 import re
 import sys
 import tempfile
@@ -13,11 +14,11 @@ from pathlib import Path
 
 from PIL import Image
 
-from images import WIDTHS, encode, outputs
+from images import COPYRIGHT, WIDTHS, credit_exif, encode, outputs
 from publish import FOCUS, visible_collections
 
 ROOT = Path(__file__).resolve().parent.parent
-GENERATED = ("index.html", "about", "collections", "licensing", "photo")
+GENERATED = ("index.html", "about", "collections", "licensing", "contact", "photo")
 SKIP_DIRS = {".git", ".claude", "tools", "photos", "node_modules"}
 failures = []
 
@@ -33,13 +34,16 @@ def check_encoding():
         exif = Image.Exif()
         exif[0x0112] = 6  # Orientation: rotate 90° clockwise to display
         exif[0x8825] = {1: "N", 2: (51.0, 30.0, 0.0)}  # GPS block
+        exif[0x010F], exif[0x0110] = "Sony", "ILCE-6700"  # make, model
         Image.new("RGB", (1500, 1000), (200, 80, 40)).save(tmp / "src.jpg", exif=exif)
         photo = {"slug": "t"}
-        encode(photo, tmp / "src.jpg", tmp / "img")
+        encode(photo, tmp / "src.jpg", tmp / "img", credit_exif("Test", "Copyright Test"))
         check(photo["w"] == 1000 and photo["h"] == 1500, "rotation not applied to size")
         for out in outputs("t", tmp / "img"):
             with Image.open(out) as im:
-                check(not im.getexif(), f"metadata left in {out.name}")
+                kept = im.getexif()
+                check(set(kept) == {0x013B, COPYRIGHT}, f"{out.name} keeps tags {sorted(kept)}")
+                check(kept.get(COPYRIGHT) == "Copyright Test", f"{out.name} lacks copyright")
                 check(im.width <= 1000, f"{out.name} upscaled to {im.width}px")
                 check(im.height > im.width, f"{out.name} not rotated")
         check(len(outputs("t", tmp / "img")) == len(WIDTHS) * 2, "wrong number of copies")
@@ -82,6 +86,17 @@ def check_pages():
         if rel.parts[0] in GENERATED:
             check("Content-Security-Policy" in text, f"{rel}: no CSP")
             check(" style=" not in text, f"{rel}: inline style blocked by CSP")
+        if rel.parts[0] == "photo":
+            check_licensable(rel, text)
+
+
+def check_licensable(rel, text):
+    m = re.search(r'<script type="application/ld\+json">(.*?)</script>', text, re.S)
+    try:
+        data = json.loads(m.group(1)) if m else {}
+    except ValueError:
+        data = {}
+    check(data.get("acquireLicensePage") and data.get("license"), f"{rel}: no licensable data")
 
 
 if __name__ == "__main__":

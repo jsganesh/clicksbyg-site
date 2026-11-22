@@ -15,8 +15,9 @@ import sys
 from html import escape as e
 from pathlib import Path
 
-from images import encode, outputs, picture
-from render import collection_cards, enquire_href, fill, grid, page
+from images import credit_exif, encode, outputs, picture
+from render import (LICENSE_FORM, PRINT_FORM, collection_cards, enquire_href, fill, grid,
+                    licensable, page)
 
 ROOT = Path(__file__).resolve().parent.parent
 FOCUS = re.compile(r"(100|\d{1,2})% (100|\d{1,2})%")
@@ -29,6 +30,7 @@ def write(path, text):
 
 def load():
     data = json.loads((ROOT / "photos" / "site.json").read_text())
+    exif = credit_exif(data["site"]["name"], copyright_notice(data["site"]))
     for p in data["photos"]:
         src = ROOT / "photos" / "source" / p["file"]
         if not src.exists():
@@ -36,12 +38,18 @@ def load():
         # focus is written into CSS, so only "x% y%" gets through.
         if not FOCUS.fullmatch(p.setdefault("focus", "50% 50%")):
             sys.exit(f"{p['slug']}: focus must look like \"60% 40%\", got {p['focus']!r}")
-        encode(p, src, ROOT / "img")
+        encode(p, src, ROOT / "img", exif)
     data["by_slug"] = {p["slug"]: p for p in data["photos"]}
     data["by_coll"] = {c["slug"]: [p for p in data["photos"] if p["collection"] == c["slug"]]
                        for c in data["collections"]}
     data["collections"] = visible_collections(data)
     return data
+
+
+def copyright_notice(site):
+    # ASCII only: EXIF text fields are ASCII, so no "©".
+    return (f"Copyright {site['copyright_start']} {site['name']}. All rights reserved. "
+            "Licensing: https://clicksbyg.com/licensing/")
 
 
 def visible_collections(data):
@@ -115,17 +123,19 @@ def build_photo(d, p, coll_titles):
     fields = (("Species", "species"), ("Place", "place"), ("Date", "date"), ("Camera", "camera"),
               ("Lens", "lens"), ("Settings", "settings"))
     exif = "".join(f"<dt>{k}</dt><dd>{e(p[f])}</dd>" for k, f in fields if p.get(f))
+    ref = f"{p['title']} (https://clicksbyg.com/photo/{p['slug']}/)"
     body = fill(
         "photo.html", slug=p["slug"], title=e(p["title"]), exif=exif,
         picture=picture(p, "100vw", cls="photo-img", loading="eager", priority=True),
         collection=p["collection"], collection_title=e(coll_titles[p["collection"]]),
         caption=f"<p>{e(p['caption'])}</p>" if p.get("caption") else "",
-        print_href=e(p.get("print_url") or enquire_href(site, f"Print: {p['title']}")),
-        license_href=e(p.get("license_url") or enquire_href(site, f"Licence: {p['title']}")),
+        print_href=e(p.get("print_url") or enquire_href(site, f"Print: {p['title']}", PRINT_FORM, ref)),
+        license_href=e(p.get("license_url") or enquire_href(site, f"Licence: {p['title']}", LICENSE_FORM, ref)),
         pager=pager(d["by_coll"][p["collection"]], p))
     write(ROOT / "photo" / p["slug"] / "index.html", page(
         site, f"{e(p['title'])} — {e(site['name'])}", p.get("alt") or p["title"], body,
-        og_image=f"/img/{p['slug']}-1280.jpg", body_class="photo-page", url=f"/photo/{p['slug']}/"))
+        og_image=f"/img/{p['slug']}-1280.jpg", body_class="photo-page", url=f"/photo/{p['slug']}/",
+        jsonld=licensable(site, p)))
 
 
 def build_about(site):
@@ -138,15 +148,21 @@ def build_about(site):
 
 
 def build_licensing(site):
-    email = site.get("contact_email")
-    contact = (f'<p>Email <a href="mailto:{e(email)}">{e(email)}</a> with the photograph\'s title, '
-               f'the size or use you have in mind, and where you are.</p>' if email else
-               '<p class="todo">Contact email not set yet: add <code>contact_email</code> to '
-               '<code>photos/site.json</code>.</p>')
     write(ROOT / "licensing" / "index.html", page(
         site, f"Prints &amp; licensing — {e(site['name'])}",
         "Buy fine-art prints or license photographs by Clicks by G.",
-        fill("licensing.html", contact=contact), current="/licensing/", url="/licensing/"))
+        fill("licensing.html"), current="/licensing/", url="/licensing/"))
+
+
+def build_contact(site):
+    email = site.get("contact_email") or sys.exit("photos/site.json: set site.contact_email")
+    body = fill("contact.html", email=e(email),
+                license_href=e(enquire_href(site, "Licence request", LICENSE_FORM)),
+                print_href=e(enquire_href(site, "Print enquiry", PRINT_FORM)),
+                report_href=e(enquire_href(site, "Unlicensed use of my photo")))
+    write(ROOT / "contact" / "index.html", page(
+        site, f"Contact — {e(site['name'])}", "Contact Clicks by G about prints, licensing or commissions.",
+        body, current="/contact/", url="/contact/"))
 
 
 def build():
@@ -156,9 +172,6 @@ def build():
     for generated in ("collections", "photo"):
         shutil.rmtree(ROOT / generated, ignore_errors=True)
     prune_images(d["photos"])
-    if not d["site"].get("contact_email"):
-        print("warning: site.contact_email is empty in photos/site.json; "
-              "enquiry buttons point at /licensing/ until you set it")
     build_css(d)
     build_home(d)
     build_collections(d)
@@ -167,6 +180,7 @@ def build():
         build_photo(d, p, titles)
     build_about(d["site"])
     build_licensing(d["site"])
+    build_contact(d["site"])
     print(f"built {len(d['photos'])} photos in {len(d['collections'])} collections")
 
 

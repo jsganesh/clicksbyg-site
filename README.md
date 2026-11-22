@@ -8,8 +8,12 @@ the photo pages are generated locally and committed.
 
 - `/`: home, with hero, collections and recent work
 - `/collections/`, `/collections/<slug>/`, `/photo/<slug>/`
-- `/about/`, `/licensing/`
-- `img/`: web copies (640/1280/2048 px, WebP + JPEG, metadata stripped)
+- `/about/`, `/licensing/`, `/contact/` (pre-filled licence and print request emails)
+- `img/`: web copies (640/1280/2048 px, WebP + JPEG). Camera metadata and GPS are
+  stripped; only artist and copyright are written in.
+
+Photo pages also carry schema.org licensing data, so Google Images can show
+them as licensable with a link to `/contact/`.
 - `assets/photos.css`: per-photo aspect ratio and placeholder colour
 
 Don't edit these by hand. Change `photos/site.json` or the HTML in
