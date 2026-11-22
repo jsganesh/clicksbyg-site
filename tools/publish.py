@@ -19,11 +19,12 @@ from pathlib import Path
 import seo
 import sitemap
 from images import credit_exif, encode, outputs, picture
-from render import (LICENSE_FORM, PRINT_FORM, collection_cards, enquire_href, fill, grid,
-                    licensable, page)
+from render import (LICENSE_FORM, PRINT_FORM, collection_cards, enquire_href, fill, follow_link,
+                    grid, identity, licensable, page)
 
 ROOT = Path(__file__).resolve().parent.parent
 FOCUS = re.compile(r"(100|\d{1,2})% (100|\d{1,2})%")
+HANDLE = re.compile(r"[A-Za-z0-9._]{1,30}")  # Instagram's allowed characters
 
 
 def write(path, text):
@@ -33,6 +34,9 @@ def write(path, text):
 
 def load():
     data = json.loads((ROOT / "photos" / "site.json").read_text())
+    handle = data["site"].get("instagram", "")
+    if handle and not HANDLE.fullmatch(handle):
+        sys.exit(f"site.instagram {handle!r}: use the handle only, without @ or a URL")
     exif = credit_exif(data["site"]["name"], copyright_notice(data["site"]))
     for p in data["photos"]:
         src = ROOT / "photos" / "source" / p["file"]
@@ -92,10 +96,12 @@ def build_home(d):
     body = fill("home.html", slug=hero["slug"], hero_title=e(hero["title"]),
                 hero_picture=picture(hero, "100vw", cls="hero-img", loading="eager", priority=True),
                 tagline=e(site["tagline"]), name=e(site["name"]), grid=grid(photos[:12]),
+                follow=follow_link(site),
                 cards=collection_cards(d["collections"], d["by_slug"], d["by_coll"]))
     write(ROOT / "index.html", page(site, e(f"{site['home_title']} | {site['name']}"),
                                     site["description"], body,
-                                    og_image=f"/img/{hero['slug']}-1280.jpg", body_class="home"))
+                                    og_image=f"/img/{hero['slug']}-1280.jpg", body_class="home",
+                                    head=identity(site)))
 
 
 def build_collections(d):
@@ -149,6 +155,7 @@ def build_photo(d, p, coll_titles):
 def build_about(site):
     paras = "".join(f"<p>{e(t)}</p>" for t in site.get("about", []))
     body = (f'<section class="band top prose-g"><h1>About</h1>{paras}'
+            f'{follow_link(site)}'
             f'<p><a class="g-btn" href="/licensing/">Prints &amp; licensing</a></p></section>')
     write(ROOT / "about" / "index.html", page(
         site, e(f"About {site['name']}, Photographer in {site['region']}"),

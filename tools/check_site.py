@@ -17,7 +17,7 @@ from PIL import Image
 
 from images import COPYRIGHT, WIDTHS, credit_exif, encode, outputs
 import seo
-from publish import FOCUS, visible_collections
+from publish import FOCUS, HANDLE, visible_collections
 
 ROOT = Path(__file__).resolve().parent.parent
 GENERATED = ("index.html", "404.html", "about", "collections", "licensing", "contact", "photo")
@@ -65,6 +65,12 @@ def check_focus():
         check(FOCUS.fullmatch(ok), f"focus {ok!r} wrongly rejected")
     for bad in ("50%", "101% 0%", "50% 50%;}body{display:none", "center"):
         check(not FOCUS.fullmatch(bad), f"focus {bad!r} wrongly accepted")
+
+
+def check_handle():
+    check(HANDLE.fullmatch("clicks.by_g"), "valid Instagram handle rejected")
+    for bad in ("@clicks.by_g", "instagram.com/clicks.by_g", 'x"><script>', ""):
+        check(not HANDLE.fullmatch(bad), f"Instagram handle {bad!r} wrongly accepted")
 
 
 def site_pages():
@@ -132,6 +138,7 @@ if __name__ == "__main__":
     check_encoding()
     check_collections()
     check_focus()
+    check_handle()
     check_pages()
     check_sitemap()
     print("\n".join(failures) or f"ok: encoding and {sum(1 for _ in site_pages())} pages checked")
