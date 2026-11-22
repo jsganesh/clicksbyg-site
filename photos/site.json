@@ -1,0 +1,119 @@
+{
+  "site": {
+    "name": "Clicks by G",
+    "tagline": "Birds, wildlife and the places they live.",
+    "photographer": "G",
+    "contact_email": "philatallypro@gmail.com",
+    "instagram": "",
+    "copyright_start": 2026,
+    "about": [
+      "I'm G. I photograph birds and wildlife, wide landscapes, and cities after dark: patient work that is mostly waiting for the light, or for an animal to look up.",
+      "Locations of nesting birds and sensitive species are kept vague on purpose. The welfare of the subject always comes before the shot.",
+      "Every photograph here is available as a fine-art print or for licensing. If you'd like one on your wall, or in your project, get in touch."
+    ]
+  },
+  "collections": [
+    {
+      "slug": "birds",
+      "title": "Birds",
+      "blurb": "Wings, feathers and the moment before flight.",
+      "cover": "brahminy-kite-face-on"
+    },
+    {
+      "slug": "wildlife",
+      "title": "Wildlife",
+      "blurb": "Animals in their own places, on their own terms.",
+      "cover": ""
+    },
+    {
+      "slug": "landscapes",
+      "title": "Landscapes",
+      "blurb": "Mountains, coast and the long blue hour.",
+      "cover": ""
+    },
+    {
+      "slug": "cityscapes",
+      "title": "Cityscapes",
+      "blurb": "Streets, skylines and city light.",
+      "cover": ""
+    }
+  ],
+  "photos": [
+    {
+      "slug": "hoopoe-in-the-canopy",
+      "file": "birds/JSG08946_DxO.jpg",
+      "title": "Hoopoe in the canopy",
+      "collection": "birds",
+      "alt": "A Eurasian hoopoe with an orange crest and black-and-white barred wings perched on a branch, seen from behind as it looks right, against soft green foliage",
+      "caption": "Sheltering from the midday glare in the shade of a tree, crest folded.",
+      "species": "Eurasian hoopoe (Upupa epops)",
+      "place": "Nanguneri, Tamil Nadu",
+      "date": "September 2026",
+      "camera": "Sony α6700",
+      "lens": "Sony FE 200–600mm F5.6–6.3 G OSS",
+      "settings": "600mm · f/6.3 · 1/1000s · ISO 1600",
+      "focus": "44% 45%",
+      "featured": true
+    },
+    {
+      "slug": "brahminy-kite-face-on",
+      "file": "birds/JSG08887_DxO.jpg",
+      "title": "Brahminy kite, face on",
+      "collection": "birds",
+      "alt": "A Brahminy kite with a white head and chest and chestnut wings standing on cut rice stubble, looking straight at the camera",
+      "caption": "On the ground among the rice stubble in the midday sun, watching me as closely as I was watching it.",
+      "species": "Brahminy kite (Haliastur indus)",
+      "place": "Nanguneri, Tamil Nadu",
+      "date": "September 2026",
+      "camera": "Sony α6700",
+      "lens": "Sony FE 200–600mm F5.6–6.3 G OSS",
+      "settings": "600mm · f/6.3 · 1/1250s · ISO 250",
+      "focus": "63% 50%"
+    },
+    {
+      "slug": "little-egret-still-water",
+      "file": "birds/JSG08793_1_DxO.jpg",
+      "title": "Little egret, still water",
+      "collection": "birds",
+      "alt": "A white little egret with long breeding plumes standing in calm water, its reflection stretching below it",
+      "caption": "Not a ripple on the water. Note the long plumes trailing from the back of its head.",
+      "species": "Little egret (Egretta garzetta)",
+      "place": "Chennai, Tamil Nadu",
+      "date": "September 2026",
+      "camera": "Sony α6700",
+      "lens": "Sony FE 200–600mm F5.6–6.3 G OSS",
+      "settings": "600mm · f/6.3 · 1/1250s · ISO 320",
+      "focus": "45% 45%"
+    },
+    {
+      "slug": "brahminy-kite-ruffled",
+      "file": "birds/JSG08849_2_DxO.jpg",
+      "title": "Brahminy kite, ruffled",
+      "collection": "birds",
+      "alt": "A Brahminy kite with feathers ruffled and beak open, standing in dry rice stubble",
+      "caption": "Feathers puffed up, mid-call.",
+      "species": "Brahminy kite (Haliastur indus)",
+      "place": "Nanguneri, Tamil Nadu",
+      "date": "September 2026",
+      "camera": "Sony α6700",
+      "lens": "Sony FE 200–600mm F5.6–6.3 G OSS",
+      "settings": "600mm · f/6.3 · 1/1250s · ISO 250",
+      "focus": "53% 45%"
+    },
+    {
+      "slug": "marsh-sandpiper-morning",
+      "file": "birds/JSG08762_1_DxO.jpg",
+      "title": "Marsh sandpiper, morning shallows",
+      "collection": "birds",
+      "alt": "A slender grey-and-white marsh sandpiper probing the shallows with a needle-thin bill, mirrored in green water",
+      "caption": "Feeding along the edge of the shallows at seven in the morning, before the heat.",
+      "species": "Marsh sandpiper (Tringa stagnatilis)",
+      "place": "Chennai, Tamil Nadu",
+      "date": "September 2026",
+      "camera": "Sony α6700",
+      "lens": "Sony FE 200–600mm F5.6–6.3 G OSS",
+      "settings": "600mm · f/6.3 · 1/1600s · ISO 1600",
+      "focus": "65% 70%"
+    }
+  ]
+}

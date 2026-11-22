@@ -1,0 +1,2 @@
+# GitHub Pages: publish the built site only, not the build tools or photo list.
+exclude: [tools, photos, requirements.txt, README.md]
