@@ -1,0 +1,98 @@
+:root {
+  --paper: #f6f1e7;
+  --card: #fffdf8;
+  --ink: #1d1b18;
+  --muted: #5f5a52;
+  --rule: #ddd3c2;
+  --navy: #1f3a5f;
+  --oxblood: #8a2b2b;
+  --link: #1f4f86;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #15140f;
+    --card: #201e18;
+    --ink: #ece6da;
+    --muted: #a59e91;
+    --rule: #3a362d;
+    --navy: #9db8dc;
+    --oxblood: #e09a8f;
+    --link: #8fb6ec;
+  }
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 1.0625rem/1.6 var(--sans);
+}
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+.prose { max-width: 680px; }
+a { color: var(--link); text-underline-offset: 2px; }
+img { max-width: 100%; height: auto; display: block; }
+h1, h2, h3 { font-family: var(--serif); line-height: 1.2; font-weight: 600; }
+h1 { font-size: clamp(2rem, 5vw, 2.8rem); margin: 0 0 0.4em; }
+h2 { font-size: 1.4rem; margin: 2.2em 0 0.5em; }
+h3 { font-size: 1.1rem; margin: 1.6em 0 0.2em; }
+code { font-size: 0.92em; }
+
+.site-header { border-bottom: 1px solid var(--rule); }
+.site-header .wrap { display: flex; align-items: baseline; gap: 1.5rem; padding-top: 1rem; padding-bottom: 1rem; flex-wrap: wrap; }
+.brand { font-family: var(--serif); font-size: 1.25rem; font-weight: 600; color: var(--ink); text-decoration: none; }
+.site-header nav { display: flex; gap: 1.1rem; flex-wrap: wrap; font-size: 0.95rem; }
+.site-header nav a { color: var(--muted); text-decoration: none; }
+.site-header nav a:hover, .site-header nav a[aria-current] { color: var(--ink); }
+
+main.wrap { padding-top: 3rem; padding-bottom: 4rem; }
+.lede { font-size: 1.2rem; color: var(--muted); max-width: 40rem; margin: 0 0 2.5rem; }
+.updated { color: var(--muted); font-size: 0.9rem; }
+
+/* Perforated edge, like a stamp: a row of holes cut out of every side. */
+/* The holes are only cut in the transparent border band; the solid second
+   mask layer keeps everything inside the border whole. */
+.stamp {
+  --hole: 6px;
+  background: var(--card);
+  border: var(--hole) solid transparent;
+  padding: 1.4rem;
+  --holes: radial-gradient(circle var(--hole) at var(--hole) var(--hole), transparent 97%, #000) calc(-1 * var(--hole)) calc(-1 * var(--hole)) / calc(var(--hole) * 3) calc(var(--hole) * 3) round border-box;
+  --solid: linear-gradient(#000 0 0) padding-box;
+  -webkit-mask: var(--holes), var(--solid);
+  mask: var(--holes), var(--solid);
+}
+
+.apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+.app-card { display: flex; flex-direction: column; gap: 0.8rem; color: inherit; text-decoration: none; }
+.app-card img { width: 72px; height: 72px; border-radius: 16px; }
+.app-card h2 { margin: 0; }
+.app-card p { margin: 0; color: var(--muted); }
+.app-card .platform { font-size: 0.85rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--oxblood); }
+.app-card .more { margin-top: auto; color: var(--link); font-weight: 500; }
+
+.app-head { display: flex; gap: 1.2rem; align-items: center; margin-bottom: 1rem; }
+.app-head img { width: 88px; height: 88px; border-radius: 20px; flex: none; }
+.app-head h1 { margin: 0; }
+.app-head p { margin: 0.2rem 0 0; color: var(--muted); }
+
+.actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin: 1.5rem 0 0.6rem; }
+.button {
+  display: inline-block; padding: 0.65rem 1.2rem; border-radius: 8px;
+  background: var(--navy); color: var(--paper); text-decoration: none; font-weight: 600;
+}
+.button.secondary { background: transparent; color: var(--navy); box-shadow: inset 0 0 0 1.5px var(--navy); }
+.note { color: var(--muted); font-size: 0.92rem; }
+
+.features { padding-left: 1.2rem; }
+.features li { margin: 0.35rem 0; }
+.shot { margin: 2rem 0; border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; }
+.shot + figcaption, figcaption { color: var(--muted); font-size: 0.9rem; margin-top: -1.3rem; margin-bottom: 2rem; }
+
+.links { display: flex; flex-wrap: wrap; gap: 0.6rem 1.4rem; padding: 0; list-style: none; }
+
+.site-footer { border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.9rem; }
+.site-footer .wrap { padding-top: 1.5rem; padding-bottom: 2rem; display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; }
+.site-footer a { color: var(--muted); }
