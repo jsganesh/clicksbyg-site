@@ -1,34 +1,41 @@
 {
   "site": {
     "name": "Clicks by G",
-    "tagline": "Light, land and water, photographed slowly.",
+    "tagline": "Birds, wildlife and the places they live.",
     "photographer": "G",
     "contact_email": "",
     "instagram": "",
     "copyright_start": 2026,
     "about": [
-      "I'm G, a photographer drawn to quiet light: the hour before sunrise, weather rolling in off the sea, mountains turning blue at dusk.",
+      "I'm G. I photograph birds and wildlife, wide landscapes, and cities after dark: patient work that is mostly waiting for the light, or for an animal to look up.",
+      "Locations of nesting birds and sensitive species are kept vague on purpose. The welfare of the subject always comes before the shot.",
       "Every photograph here is available as a fine-art print or for licensing. If you'd like one on your wall, or in your project, get in touch."
     ]
   },
   "collections": [
     {
-      "slug": "mountains",
-      "title": "Mountains",
-      "blurb": "Ridges, haze and the long blue hour.",
+      "slug": "birds",
+      "title": "Birds",
+      "blurb": "Wings, feathers and the moment before flight.",
+      "cover": ""
+    },
+    {
+      "slug": "wildlife",
+      "title": "Wildlife",
+      "blurb": "Animals in their own places, on their own terms.",
+      "cover": ""
+    },
+    {
+      "slug": "landscapes",
+      "title": "Landscapes",
+      "blurb": "Mountains, coast and the long blue hour.",
       "cover": "blue-ridges"
     },
     {
-      "slug": "coast",
-      "title": "Coast",
-      "blurb": "Tides, weather and the edge of the land.",
-      "cover": "low-tide-gold"
-    },
-    {
-      "slug": "after-dark",
-      "title": "After dark",
-      "blurb": "When the sun is gone and the colour stays.",
-      "cover": "violet-hour"
+      "slug": "cityscapes",
+      "title": "Cityscapes",
+      "blurb": "Streets, skylines and city light.",
+      "cover": ""
     }
   ],
   "photos": [
@@ -36,7 +43,7 @@
       "slug": "blue-ridges",
       "file": "samples/blue-ridges.jpg",
       "title": "Blue ridges",
-      "collection": "mountains",
+      "collection": "landscapes",
       "alt": "Layers of blue mountain ridges fading into haze under a pale sky",
       "caption": "Sample image. Replace with your own photo and story.",
       "place": "Sample location",
@@ -52,7 +59,7 @@
       "slug": "low-tide-gold",
       "file": "samples/low-tide-gold.jpg",
       "title": "Low tide, gold",
-      "collection": "coast",
+      "collection": "landscapes",
       "alt": "A low sun over still water with dark headlands either side",
       "caption": "Sample image. Replace with your own photo and story.",
       "place": "Sample location",
@@ -62,7 +69,7 @@
       "slug": "violet-hour",
       "file": "samples/violet-hour.jpg",
       "title": "Violet hour",
-      "collection": "after-dark",
+      "collection": "landscapes",
       "alt": "Dark mountain silhouettes under a violet and rose evening sky",
       "caption": "Sample image. Replace with your own photo and story.",
       "place": "Sample location",
@@ -72,7 +79,7 @@
       "slug": "first-light",
       "file": "samples/first-light.jpg",
       "title": "First light",
-      "collection": "mountains",
+      "collection": "landscapes",
       "alt": "Peach-coloured dawn light behind a tall mountain, portrait format",
       "caption": "Sample image.",
       "place": "Sample location",
@@ -82,7 +89,7 @@
       "slug": "sea-fret",
       "file": "samples/sea-fret.jpg",
       "title": "Sea fret",
-      "collection": "coast",
+      "collection": "landscapes",
       "alt": "Grey-green headlands dissolving into sea mist",
       "caption": "Sample image.",
       "place": "Sample location",
@@ -92,7 +99,7 @@
       "slug": "long-valley",
       "file": "samples/long-valley.jpg",
       "title": "Long valley",
-      "collection": "mountains",
+      "collection": "landscapes",
       "alt": "A wide panorama of green and teal hills under a soft sky",
       "caption": "Sample image.",
       "place": "Sample location",
@@ -102,7 +109,7 @@
       "slug": "ember",
       "file": "samples/ember.jpg",
       "title": "Ember",
-      "collection": "after-dark",
+      "collection": "landscapes",
       "alt": "A deep red sunset glow behind black ridges",
       "caption": "Sample image.",
       "place": "Sample location",
@@ -112,7 +119,7 @@
       "slug": "harbour-dusk",
       "file": "samples/harbour-dusk.jpg",
       "title": "Harbour, dusk",
-      "collection": "coast",
+      "collection": "landscapes",
       "alt": "Calm water reflecting a dusky blue and orange sky, portrait format",
       "caption": "Sample image.",
       "place": "Sample location",
@@ -122,7 +129,7 @@
       "slug": "moonrise",
       "file": "samples/moonrise.jpg",
       "title": "Moonrise",
-      "collection": "after-dark",
+      "collection": "landscapes",
       "alt": "A pale moon rising over dark blue mountains",
       "caption": "Sample image.",
       "place": "Sample location",

@@ -14,6 +14,7 @@ from pathlib import Path
 from PIL import Image
 
 from images import WIDTHS, encode, outputs
+from publish import visible_collections
 
 ROOT = Path(__file__).resolve().parent.parent
 GENERATED = ("index.html", "about", "collections", "licensing", "photo")
@@ -44,6 +45,15 @@ def check_encoding():
         check(len(outputs("t", tmp / "img")) == len(WIDTHS) * 2, "wrong number of copies")
 
 
+def check_collections():
+    photos = [{"slug": "a", "collection": "birds"}, {"slug": "b", "collection": "birds"}]
+    data = {"collections": [{"slug": "birds", "cover": "missing"}, {"slug": "cities", "cover": ""}],
+            "by_coll": {"birds": photos, "cities": []}}
+    shown = visible_collections(data)
+    check([c["slug"] for c in shown] == ["birds"], "empty collection not hidden")
+    check(shown[0]["cover"] == "a", "missing cover not replaced by first photo")
+
+
 def site_pages():
     for path in ROOT.rglob("*.html"):
         if not SKIP_DIRS & set(path.relative_to(ROOT).parts):
@@ -69,6 +79,7 @@ def check_pages():
 
 if __name__ == "__main__":
     check_encoding()
+    check_collections()
     check_pages()
     print("\n".join(failures) or f"ok: encoding and {sum(1 for _ in site_pages())} pages checked")
     sys.exit(1 if failures else 0)

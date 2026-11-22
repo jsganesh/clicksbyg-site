@@ -9,11 +9,12 @@ photo, about and licensing pages and assets/photos.css. The app pages
 (/apps/, /philatally/, /stampalbum-pro/) are hand-written and never touched.
 """
 import json
+import shutil
 import sys
 from html import escape as e
 from pathlib import Path
 
-from images import encode, picture
+from images import encode, outputs, picture
 from render import collection_cards, enquire_href, fill, grid, page
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -34,7 +35,31 @@ def load():
     data["by_slug"] = {p["slug"]: p for p in data["photos"]}
     data["by_coll"] = {c["slug"]: [p for p in data["photos"] if p["collection"] == c["slug"]]
                        for c in data["collections"]}
+    data["collections"] = visible_collections(data)
     return data
+
+
+def visible_collections(data):
+    """Collections with photos, each with a valid cover. Empty ones stay
+    hidden, so a new category can be listed before its photos are ready."""
+    shown = []
+    for c in data["collections"]:
+        members = data["by_coll"][c["slug"]]
+        if not members:
+            print(f"note: collection '{c['slug']}' has no photos yet and is hidden")
+            continue
+        if c.get("cover") not in {p["slug"] for p in members}:
+            c["cover"] = members[0]["slug"]
+        shown.append(c)
+    return shown
+
+
+def prune_images(photos):
+    keep = {o for p in photos for o in outputs(p["slug"], ROOT / "img")}
+    for f in (ROOT / "img").glob("*"):
+        if f not in keep:
+            f.unlink()
+            print("removed", f.name)
 
 
 def build_css(d):
@@ -81,7 +106,7 @@ def pager(seq, p):
 
 def build_photo(d, p, coll_titles):
     site = d["site"]
-    fields = (("Place", "place"), ("Date", "date"), ("Camera", "camera"),
+    fields = (("Species", "species"), ("Place", "place"), ("Date", "date"), ("Camera", "camera"),
               ("Lens", "lens"), ("Settings", "settings"))
     exif = "".join(f"<dt>{k}</dt><dd>{e(p[f])}</dd>" for k, f in fields if p.get(f))
     body = fill(
@@ -120,6 +145,11 @@ def build_licensing(site):
 
 def build():
     d = load()
+    # These folders are entirely generated; clearing them drops pages for
+    # photos or collections that were renamed or removed.
+    for generated in ("collections", "photo"):
+        shutil.rmtree(ROOT / generated, ignore_errors=True)
+    prune_images(d["photos"])
     if not d["site"].get("contact_email"):
         print("warning: site.contact_email is empty in photos/site.json; "
               "enquiry buttons point at /licensing/ until you set it")
