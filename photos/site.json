@@ -2,9 +2,10 @@
   "site": {
     "name": "Clicks by G",
     "tagline": "Birds, wildlife and the places they live.",
-    "home_title": "Bird & Wildlife Photography from Tamil Nadu",
-    "description": "Fine-art bird and wildlife photographs from Tamil Nadu, India: hoopoes, kites, egrets and waders. Prints and image licensing by Clicks by G.",
-    "region": "Tamil Nadu, India",
+    "home_title": "Bird & Wildlife Photography from around the world",
+    "description": "Fine-art bird and wildlife photographs from around the world: hoopoes, kites, egrets and waders. Prints and image licensing by Clicks by G, New Zealand.",
+    "region": "around the world",
+    "based_in": "New Zealand",
     "photographer": "G",
     "contact_email": "philatallypro@gmail.com",
     "instagram": "clicks.by_g",
@@ -13,6 +14,15 @@
       "I'm G. I photograph birds and wildlife, wide landscapes, and cities after dark: patient work that is mostly waiting for the light, or for an animal to look up.",
       "Locations of nesting birds and sensitive species are kept vague on purpose. The welfare of the subject always comes before the shot.",
       "Every photograph here is available as a fine-art print or for licensing. If you'd like one on your wall, or in your project, get in touch."
+    ]
+  },
+  "prints": {
+    "currency": "NZD",
+    "ships_to": "New Zealand",
+    "sizes": [
+      { "name": "20 × 30 cm", "unframed": 45, "framed": 95 },
+      { "name": "30 × 45 cm", "unframed": 75, "framed": 145 },
+      { "name": "40 × 60 cm", "unframed": 110, "framed": 210 }
     ]
   },
   "collections": [

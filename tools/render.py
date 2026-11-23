@@ -9,7 +9,7 @@ from urllib.parse import quote
 from images import picture
 
 TEMPLATES = Path(__file__).resolve().parent / "templates"
-NAV = (("/collections/", "Collections"), ("/about/", "About"),
+NAV = (("/collections/", "Collections"), ("/prints/", "Buy a print"), ("/about/", "About"),
        ("/licensing/", "Prints &amp; licensing"), ("/contact/", "Contact"), ("/apps/", "Apps"))
 # GitHub Pages can't send headers, so the policy rides in a meta tag.
 CSP = ("default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; "
@@ -75,7 +75,7 @@ What will it be used for? (website, social media, book or magazine, advertising,
 Where will it appear?
 Size or resolution needed:
 For how long? (e.g. 1 year, 5 years, perpetual)
-Region (e.g. India, worldwide):
+Region (e.g. New Zealand, worldwide):
 Your name and organisation:
 Budget, if you have one:
 """

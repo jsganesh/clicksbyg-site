@@ -5,7 +5,7 @@
 
 Makes metadata-free web copies in img/ of each export in photos/source/
 (only when the export is newer), then regenerates the home, collection,
-photo, about, licensing and contact pages, assets/photos.css,
+photo, prints, about, licensing and contact pages, assets/photos.css,
 sitemap.xml and robots.txt. The app pages
 (/apps/, /philatally/, /stampalbum-pro/) are hand-written and never touched.
 """
@@ -16,6 +16,7 @@ import sys
 from html import escape as e
 from pathlib import Path
 
+import prints
 import seo
 import sitemap
 from images import credit_exif, encode, outputs, picture
@@ -37,6 +38,9 @@ def load():
     handle = data["site"].get("instagram", "")
     if handle and not HANDLE.fullmatch(handle):
         sys.exit(f"site.instagram {handle!r}: use the handle only, without @ or a URL")
+    problem = prints.validate(data.get("prints", {}))
+    if problem:
+        sys.exit(f"photos/site.json: {problem}")
     exif = credit_exif(data["site"]["name"], copyright_notice(data["site"]))
     for p in data["photos"]:
         src = ROOT / "photos" / "source" / p["file"]
@@ -143,7 +147,7 @@ def build_photo(d, p, coll_titles):
         picture=picture(p, "100vw", cls="photo-img", loading="eager", priority=True),
         collection=p["collection"], collection_title=e(coll_titles[p["collection"]]),
         caption=f"<p>{e(p['caption'])}</p>" if p.get("caption") else "",
-        print_href=e(p.get("print_url") or enquire_href(site, f"Print: {p['title']}", PRINT_FORM, ref)),
+        print_href=e(p.get("print_url") or f"/prints/#{p['slug']}"),
         license_href=e(p.get("license_url") or enquire_href(site, f"Licence: {p['title']}", LICENSE_FORM, ref)),
         pager=pager(d["by_coll"][p["collection"]], p))
     write(ROOT / "photo" / p["slug"] / "index.html", page(
@@ -158,7 +162,7 @@ def build_about(site):
             f'{follow_link(site)}'
             f'<p><a class="g-btn" href="/licensing/">Prints &amp; licensing</a></p></section>')
     write(ROOT / "about" / "index.html", page(
-        site, e(f"About {site['name']}, Photographer in {site['region']}"),
+        site, e(f"About {site['name']}, Photographer in {site['based_in']}"),
         seo.clip(" ".join(site.get("about", [])[:1]) or site["description"]),
         body, current="/about/", url="/about/"))
 
@@ -181,6 +185,15 @@ def build_contact(site):
         site, e(f"Contact {site['name']} | Prints, Licensing & Commissions"),
         f"Request a photo licence, order a print or ask about commissions with {site['name']}.",
         body, current="/contact/", url="/contact/"))
+
+
+def build_prints(d):
+    site = d["site"]
+    write(ROOT / "prints" / "index.html", page(
+        site, e(f"Buy Bird Photography Prints | {site['name']}"),
+        f"Order archival bird photography prints by {site['name']}, framed or unframed, "
+        f"delivered within {d['prints']['ships_to']}. Prices in {d['prints']['currency']}.",
+        prints.body(site, d["prints"], d["photos"]), current="/prints/", url="/prints/"))
 
 
 def build_404(d):
@@ -209,6 +222,7 @@ def build():
     for p in d["photos"]:
         build_photo(d, p, titles)
     build_about(d["site"])
+    build_prints(d)
     build_licensing(d["site"])
     build_contact(d["site"])
     build_404(d)
