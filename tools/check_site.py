@@ -13,6 +13,7 @@ import re
 import sys
 import tempfile
 from pathlib import Path
+from urllib.parse import quote
 
 from PIL import Image
 
@@ -85,10 +86,14 @@ def check_prints():
         check(prints.validate(bad) is not None, f"bad print prices accepted: {bad}")
     form = prints.order_form(good)
     check("Photo: {photo}" in form and "20 × 30 cm" in form, "order email misses the photo or sizes")
+    abroad = prints.order_form(good, overseas=True)
+    check("Country:" in abroad and "New Zealand" not in abroad, "overseas order email doesn't ask for the country")
     data = json.loads((ROOT / "photos" / "site.json").read_text())
     text = (ROOT / "prints" / "index.html").read_text()
     for photo in data["photos"]:
         check(f'id="{photo["slug"]}"' in text, f"prints page has no order button for {photo['slug']}")
+        check(quote(f"Overseas print order: {photo['title']}") in text,
+              f"prints page has no overseas order link for {photo['slug']}")
 
 
 def site_pages():

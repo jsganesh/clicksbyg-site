@@ -24,14 +24,15 @@ def validate(prints):
     return None
 
 
-def order_form(prints):
+def order_form(prints, overseas=False):
     # {photo} stays a placeholder for enquire_href to fill per photo.
     sizes = ", ".join(s["name"] for s in prints["sizes"])
+    # Overseas postage varies by country, so those orders need the country to quote.
+    where = "Country:\nDelivery address:\n" if overseas else f"Delivery address in {prints['ships_to']}:\n"
     return ("Photo: {photo}\n\n"
             f"Size ({sizes}):\n"
             "Unframed or framed:\n"
-            "Your name:\n"
-            f"Delivery address in {prints['ships_to']}:\n")
+            "Your name:\n" + where)
 
 
 def price_rows(prints):
@@ -41,17 +42,22 @@ def price_rows(prints):
                    for s in prints["sizes"])
 
 
-def cards(site, photos, form):
+def cards(site, prints, photos):
+    local, overseas = order_form(prints), order_form(prints, overseas=True)
     return "".join(
         f'<li class="pr-card p-{p["slug"]}" id="{p["slug"]}">'
         f'{picture(p, "(max-width: 700px) 100vw, 33vw", cls="pr-img")}'
         f'<h3>{e(p["title"])}</h3>'
-        f'<a class="g-btn" href="{e(enquire_href(site, "Print order: " + p["title"], form, p["title"]))}">'
-        f'Order this print</a></li>'
+        f'<a class="g-btn" href="{e(enquire_href(site, "Print order: " + p["title"], local, p["title"]))}">'
+        f'Order this print</a>'
+        f'<a class="pr-abroad" href="{e(enquire_href(site, "Overseas print order: " + p["title"], overseas, p["title"]))}">'
+        f'Outside {e(prints["ships_to"])}? Ask for a delivered price</a></li>'
         for p in photos)
 
 
 def body(site, prints, photos):
     return fill("prints.html", currency=e(prints["currency"]), ships_to=e(prints["ships_to"]),
-                rows=price_rows(prints), cards=cards(site, photos, order_form(prints)),
+                rows=price_rows(prints), cards=cards(site, prints, photos),
+                overseas_href=e(enquire_href(site, "Overseas print order",
+                                             order_form(prints, overseas=True))),
                 quote_href=e(enquire_href(site, "Print quote", PRINT_FORM)))

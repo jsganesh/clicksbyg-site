@@ -202,3 +202,5 @@ h2 { font-size: 1.5rem; margin: 2em 0 0.5em; }
 @media (min-width: 1000px) { .pr-grid { grid-template-columns: repeat(3, 1fr); } }
 .pr-card h3 { font: 500 1.25rem/1.25 var(--serif); margin: 0.8rem 0 0.7rem; }
 .pr-img img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; object-position: var(--focus, 50% 50%); border-radius: 2px; background-color: var(--ph, var(--surface)); }
+.pr-abroad { display: block; margin-top: 0.7rem; color: var(--muted); font-size: 0.88rem; }
+.pr-abroad:hover { color: var(--ink); }

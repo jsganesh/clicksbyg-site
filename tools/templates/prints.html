@@ -3,10 +3,10 @@
       <div class="prose-g">
         <h1>Buy a print</h1>
         <p class="lede">Archival prints of every photograph, made to order and
-        delivered within $ships_to. No account or checkout: pick a photograph,
+        delivered in $ships_to or posted overseas. No account or checkout: pick a photograph,
         send the email, and I'll take it from there.</p>
 
-        <h2>How ordering works</h2>
+        <h2>Ordering within $ships_to</h2>
         <ol class="pr-steps">
           <li>Choose a photograph below and press <strong>Order this print</strong>.
           An email opens with the details to fill in.</li>
@@ -17,7 +17,7 @@
 
         <h2>Sizes and prices</h2>
         <table class="pr-prices">
-          <caption>Prices in $currency</caption>
+          <caption>Prices in $currency, delivered within $ships_to</caption>
           <thead><tr><th scope="col">Size</th><th scope="col">Unframed</th><th scope="col">Framed</th></tr></thead>
           <tbody>$rows</tbody>
         </table>
@@ -27,9 +27,22 @@
       <ul class="pr-grid">$cards</ul>
 
       <div class="prose-g">
+        <h2 id="overseas">Ordering from outside $ships_to</h2>
+        <p>The prices above don't include packaging and international postage,
+        which depend on the size, the frame and where it's going.</p>
+        <ol class="pr-steps">
+          <li>Press <strong>Ask for a delivered price</strong> under the photograph,
+          or the button below for more than one print. Include your country and
+          delivery address.</li>
+          <li>I reply with a total that includes packaging and tracked postage,
+          and a secure link to pay by card.</li>
+          <li>Once you've paid through that link, your print is made and posted.</li>
+        </ol>
+        <p><a class="g-btn" href="$overseas_href">Order from overseas</a></p>
+
         <h2>Something different?</h2>
-        <p>Another size, a different paper, a set of prints or delivery outside
-        $ships_to: ask for a quote and I'll reply with a price.</p>
+        <p>Another size, a different paper or a set of prints: ask for a quote
+        and I'll reply with a price.</p>
         <p><a class="g-btn ghost" href="$quote_href">Ask for a quote</a></p>
       </div>
     </section>
