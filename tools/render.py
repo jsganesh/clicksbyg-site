@@ -75,7 +75,7 @@ What will it be used for? (website, social media, book or magazine, advertising,
 Where will it appear?
 Size or resolution needed:
 For how long? (e.g. 1 year, 5 years, perpetual)
-Region (e.g. India, worldwide):
+Region (e.g. New Zealand, worldwide):
 Your name and organisation:
 Budget, if you have one:
 """

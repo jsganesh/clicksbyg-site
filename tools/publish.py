@@ -162,7 +162,7 @@ def build_about(site):
             f'{follow_link(site)}'
             f'<p><a class="g-btn" href="/licensing/">Prints &amp; licensing</a></p></section>')
     write(ROOT / "about" / "index.html", page(
-        site, e(f"About {site['name']}, Photographer in {site['region']}"),
+        site, e(f"About {site['name']}, Photographer in {site['based_in']}"),
         seo.clip(" ".join(site.get("about", [])[:1]) or site["description"]),
         body, current="/about/", url="/about/"))
 
