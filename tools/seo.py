@@ -19,9 +19,10 @@ def subject(p):
 
 def photo_title(site, p, shared):
     """Species first. When several photos show the same species, their own
-    titles ("Brahminy kite, face on") keep the page titles distinct."""
+    titles keep the page titles distinct, with the species in brackets so
+    a playful title ("Bath time") still says what it shows."""
     place = f", {p['place']}" if p.get("place") else ""
-    lead = p["title"] if subject(p) in shared else f"{subject(p)} photo"
+    lead = f"{p['title']} ({subject(p)})" if subject(p) in shared else f"{subject(p)} photo"
     return f"{lead}{place} | {site['name']}"
 
 
