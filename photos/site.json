@@ -597,19 +597,6 @@
       "caption": "Black-billed gulls are found only in New Zealand and are among the most threatened gulls in the world."
     },
     {
-      "slug": "kakariki-on-the-rail",
-      "file": "birds/JSG02609_DxO.JPG",
-      "title": "Green with curiosity",
-      "collection": "birds",
-      "alt": "A bright green red-crowned parakeet (kākāriki) perched on a metal rail against leafy green foliage",
-      "species": "Red-crowned parakeet (Cyanoramphus novaezelandiae)",
-      "place": "New Zealand",
-      "date": "March 2025",
-      "camera": "Sony α6700",
-      "lens": "Sony FE 70–300mm F4.5–5.6 G OSS",
-      "settings": "300mm · f/5.6 · 1/2000s · ISO 3200"
-    },
-    {
       "slug": "robin-on-the-hedge",
       "file": "birds/JSG02694_1_DxO.JPG",
       "title": "King of the hedge",
@@ -936,18 +923,6 @@
       "settings": "600mm · f/6.3 · 1/2000s · ISO 500"
     },
     {
-      "slug": "little-egret-taking-off",
-      "file": "birds/JSG06125_DxO.JPG",
-      "title": "Take-off",
-      "collection": "birds",
-      "alt": "A white little egret lifting off from shallow water, wings raised and legs trailing",
-      "species": "Little egret (Egretta garzetta)",
-      "date": "January 2025",
-      "camera": "Sony α6700",
-      "lens": "Sony FE 200–600mm F5.6–6.3 G OSS",
-      "settings": "600mm · f/7.1 · 1/2000s · ISO 800"
-    },
-    {
       "slug": "pied-stilts-reflected",
       "file": "birds/JSG07227_DxO.JPG",
       "title": "Mirror, mirror",
@@ -1047,18 +1022,6 @@
       "species": "Little black shag (Phalacrocorax sulcirostris)"
     },
     {
-      "slug": "golden-pheasant",
-      "file": "birds/JSG09703_1_DxO.JPG",
-      "title": "Good hair day",
-      "collection": "birds",
-      "alt": "A close-up of a golden pheasant's head, with a bright golden crest and a striped orange-and-black cape",
-      "species": "Golden pheasant (Chrysolophus pictus)",
-      "date": "January 2025",
-      "camera": "Sony α6700",
-      "lens": "Sony FE 70–300mm F4.5–5.6 G OSS",
-      "settings": "300mm · f/5.6 · 1/1600s · ISO 6400"
-    },
-    {
       "slug": "fur-seal-on-the-rocks",
       "file": "wildlife/JSG04954_1_DxO.JPG",
       "title": "Posing for the camera",
@@ -1141,16 +1104,6 @@
       "camera": "Sony α6700",
       "lens": "Sony E PZ 16–50mm F3.5–5.6 OSS",
       "settings": "24mm · f/10 · 1/640s · ISO 100"
-    },
-    {
-      "slug": "rusted-car-at-low-tide",
-      "file": "landscapes/IMG_5283.JPEG",
-      "title": "Rusted car at low tide",
-      "collection": "landscapes",
-      "alt": "A burnt-out, rusted car standing in shallow water on a tidal flat, reflected below",
-      "date": "September 2025",
-      "camera": "iPhone 12 Pro",
-      "settings": "6mm · f/2 · 1/2994s · ISO 25"
     },
     {
       "slug": "rusted-car-on-the-flats",
@@ -1405,17 +1358,6 @@
       "camera": "Sony α6700",
       "lens": "Sony FE 200–600mm F5.6–6.3 G OSS",
       "settings": "600mm · f/11 · 1/320s · ISO 6400"
-    },
-    {
-      "slug": "fuchsia-flowers",
-      "file": "flowers/JSG07971_1_DxO.JPG",
-      "title": "Fuchsia flowers",
-      "collection": "flowers",
-      "alt": "Pink and violet fuchsia flowers hanging beneath green leaves",
-      "date": "August 2025",
-      "camera": "Sony α6700",
-      "lens": "Sony FE 200–600mm F5.6–6.3 G OSS",
-      "settings": "600mm · f/11 · 1/250s · ISO 6400"
     },
     {
       "slug": "damselflies-over-the-water",
