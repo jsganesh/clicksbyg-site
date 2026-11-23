@@ -886,15 +886,16 @@
       "settings": "600mm · f/6.3 · 1/1000s · ISO 800"
     },
     {
-      "slug": "plumes-in-the-wind",
+      "slug": "royal-spoonbill-windswept",
       "file": "birds/JSG05306_DxO.JPG",
       "title": "Windswept",
       "collection": "birds",
-      "alt": "A white wading bird on a mudflat with its feathers blown up into a crest of plumes, long black legs below",
+      "alt": "A royal spoonbill on a mudflat with its white breeding plumes blown up by the wind, long black legs below",
       "date": "December 2024",
       "camera": "Sony α6700",
       "lens": "Sony FE 200–600mm F5.6–6.3 G OSS",
-      "settings": "600mm · f/6.3 · 1/2500s · ISO 200"
+      "settings": "600mm · f/6.3 · 1/2500s · ISO 200",
+      "species": "Royal spoonbill (Platalea regia)"
     },
     {
       "slug": "shoveler-drake",
