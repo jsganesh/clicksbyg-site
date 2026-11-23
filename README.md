@@ -30,7 +30,7 @@ Page titles and descriptions come from `tools/seo.py`: species, place and
 kind of photo first, brand last, built from each photo's `species`/`place`
 and `site.region`, `site.home_title`, `site.description` and each
 collection's `kind`. `404.html` is generated too, marked noindex.
-`site.region` says where the photos come from ("Around the World") and goes
+`site.region` says where the photos come from ("around the world") and goes
 into the collection titles; `site.based_in` is where you live and goes into the
 About title.
 
