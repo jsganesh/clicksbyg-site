@@ -42,7 +42,7 @@
       "slug": "cityscapes",
       "title": "Cityscapes",
       "blurb": "Streets, skylines and city light.",
-      "cover": "auckland-waterfront-at-dusk",
+      "cover": "auckland-waterfront-at-dawn",
       "kind": "Cityscape"
     },
     {
@@ -196,11 +196,11 @@
       "caption": "Early morning, just before heading out to sea, gathered in a circle as if deep in conversation."
     },
     {
-      "slug": "auckland-waterfront-at-dusk",
+      "slug": "auckland-waterfront-at-dawn",
       "file": "cityscapes/JSG01600_1_DxO.JPG",
-      "title": "Auckland waterfront at dusk",
+      "title": "Auckland waterfront at dawn",
       "collection": "cityscapes",
-      "alt": "Auckland's skyline and Sky Tower at dusk, seen across the harbour from a pier",
+      "alt": "Auckland's skyline and Sky Tower at dawn, seen across the harbour from a pier",
       "place": "Auckland, New Zealand",
       "date": "March 2025",
       "camera": "Sony α6700",
@@ -872,7 +872,7 @@
       "camera": "Sony α6700",
       "lens": "Sony FE 200–600mm F5.6–6.3 G OSS",
       "settings": "600mm · f/6.3 · 1/2000s · ISO 1250",
-      "place": "Marlborough, New Zealand"
+      "place": "New Zealand"
     },
     {
       "slug": "hoary-headed-grebe-face-on",
@@ -885,7 +885,7 @@
       "camera": "Sony α6700",
       "lens": "Sony FE 200–600mm F5.6–6.3 G OSS",
       "settings": "600mm · f/6.3 · 1/1000s · ISO 800",
-      "place": "Marlborough, New Zealand"
+      "place": "New Zealand"
     },
     {
       "slug": "royal-spoonbill-windswept",
@@ -1188,15 +1188,16 @@
       "place": "Kaikōura, New Zealand"
     },
     {
-      "slug": "harbourside-at-dusk",
+      "slug": "harbourside-at-dawn",
       "file": "cityscapes/JSG01605_1_DxO.JPG",
-      "title": "Harbourside at dusk",
+      "title": "Harbourside at dawn",
       "collection": "cityscapes",
-      "alt": "Waterfront buildings glowing with evening lights and reflected in harbour water under a pink sky",
+      "alt": "Waterfront buildings with their lights still on at dawn, reflected in harbour water under a pink sky",
       "date": "March 2025",
       "camera": "Sony α6700",
       "lens": "Sony FE 24–105mm F4 G OSS",
-      "settings": "54mm · f/6.3 · 1/100s · ISO 6400"
+      "settings": "54mm · f/6.3 · 1/100s · ISO 6400",
+      "place": "Auckland, New Zealand"
     },
     {
       "slug": "heritage-facade-in-rainbow-light",
