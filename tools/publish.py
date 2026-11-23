@@ -144,14 +144,19 @@ def photo_arrows(seq, p):
         for n, cls, label, arrow in ((prev_p, "prev", "Previous photo", "‹"), (next_p, "next", "Next photo", "›")) if n)
 
 
+def details(p, fields):
+    return "".join(f"<dt>{k}</dt><dd>{e(p[f])}</dd>" for k, f in fields if p.get(f))
+
+
 def build_photo(d, p, coll_titles):
     site = d["site"]
-    fields = (("Species", "species"), ("Place", "place"), ("Date", "date"), ("Camera", "camera"),
-              ("Lens", "lens"), ("Settings", "settings"))
-    exif = "".join(f"<dt>{k}</dt><dd>{e(p[f])}</dd>" for k, f in fields if p.get(f))
+    exif = details(p, (("Species", "species"), ("Place", "place"), ("Date", "date")))
+    gear = details(p, (("Camera", "camera"), ("Lens", "lens"), ("Settings", "settings")))
+    # Photographers can open the kit details; everyone else gets a shorter page.
+    gear = f'<details class="gear"><summary>Camera details</summary><dl class="exif">{gear}</dl></details>' if gear else ""
     ref = f"{p['title']} (https://clicksbyg.com/photo/{p['slug']}/)"
     body = fill(
-        "photo.html", slug=p["slug"], title=e(p["title"]), exif=exif,
+        "photo.html", slug=p["slug"], title=e(p["title"]), exif=exif, gear=gear,
         picture=picture(p, "100vw", cls="photo-img", loading="eager", priority=True),
         collection=p["collection"], collection_title=e(coll_titles[p["collection"]]),
         caption=f"<p>{e(p['caption'])}</p>" if p.get("caption") else "",

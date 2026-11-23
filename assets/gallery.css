@@ -163,6 +163,10 @@ h2 { font-size: 1.5rem; margin: 2em 0 0.5em; }
 .exif { display: grid; grid-template-columns: max-content 1fr; gap: 0.3rem 1.2rem; margin: 1.4rem 0 0; font-size: 0.9rem; }
 .exif dt { color: var(--muted); }
 .exif dd { margin: 0; }
+.gear { margin-top: 1rem; font-size: 0.9rem; }
+.gear summary { color: var(--muted); cursor: pointer; width: fit-content; }
+.gear summary:hover { color: var(--ink); }
+.gear .exif { margin-top: 0.6rem; }
 .photo-buy { display: flex; flex-direction: column; align-items: flex-start; gap: 0.7rem; padding-top: 0.4rem; }
 .note { color: var(--muted); font-size: 0.88rem; margin: 0.3rem 0 0; }
 .pager {
