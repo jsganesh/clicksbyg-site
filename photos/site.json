@@ -299,13 +299,15 @@
     {
       "slug": "small-bird-taking-off",
       "file": "birds/DSC00784_1_DxO.JPG",
-      "title": "Small bird taking off",
+      "title": "Grey warbler taking off",
       "collection": "birds",
-      "alt": "A small grey-brown bird with its wings raised, about to take off from a twiggy shrub with fresh green leaves",
+      "alt": "A grey warbler with its wings raised, about to take off from a twiggy shrub with fresh green leaves",
       "date": "October 2025",
       "camera": "Sony α7R V",
       "lens": "Sony FE 200–600mm F5.6–6.3 G OSS",
-      "settings": "600mm · f/6.3 · 1/3200s · ISO 4000"
+      "settings": "600mm · f/6.3 · 1/3200s · ISO 4000",
+      "species": "Grey warbler (Gerygone igata)",
+      "place": "New Zealand"
     },
     {
       "slug": "crested-grebes-courting",
@@ -577,24 +579,30 @@
     {
       "slug": "gull-bathing-in-the-shallows",
       "file": "birds/JSG01994_DxO_DxO.JPG",
-      "title": "Gull bathing in the shallows",
+      "title": "Black-billed gull bathing",
       "collection": "birds",
-      "alt": "A white gull splashing as it bathes in clear water over pebbles",
+      "alt": "A black-billed gull splashing as it bathes in clear water over pebbles",
       "date": "December 2024",
       "camera": "Sony α6700",
       "lens": "Sony FE 200–600mm F5.6–6.3 G OSS",
-      "settings": "356mm · f/6.3 · 1/2000s · ISO 1000"
+      "settings": "356mm · f/6.3 · 1/2000s · ISO 1000",
+      "species": "Black-billed gull (Chroicocephalus bulleri)",
+      "place": "New Zealand",
+      "caption": "Black-billed gulls are found only in New Zealand and are among the most threatened gulls in the world."
     },
     {
       "slug": "gull-splashing-on-the-lake",
       "file": "birds/JSG03643_DxO.JPG",
-      "title": "Gull splashing on the lake",
+      "title": "Black-billed gull splashing",
       "collection": "birds",
-      "alt": "A gull ducking its head into rippled blue water, spray flying around it",
+      "alt": "A black-billed gull ducking its head into rippled blue water, spray flying around it",
       "date": "March 2025",
       "camera": "Sony α6700",
       "lens": "Sony FE 200–600mm F5.6–6.3 G OSS",
-      "settings": "600mm · f/6.3 · 1/1000s · ISO 160"
+      "settings": "600mm · f/6.3 · 1/1000s · ISO 160",
+      "species": "Black-billed gull (Chroicocephalus bulleri)",
+      "place": "New Zealand",
+      "caption": "Black-billed gulls are found only in New Zealand and are among the most threatened gulls in the world."
     },
     {
       "slug": "kakariki-on-the-rail",
@@ -1091,7 +1099,8 @@
       "date": "August 2026",
       "camera": "Sony α6700",
       "lens": "Sony FE 200–600mm F5.6–6.3 G OSS",
-      "settings": "600mm · f/6.3 · 1/250s · ISO 3200"
+      "settings": "600mm · f/6.3 · 1/250s · ISO 3200",
+      "place": "Denmark"
     },
     {
       "slug": "new-brighton-pier-at-sunrise",
