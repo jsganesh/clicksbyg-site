@@ -35,6 +35,8 @@ Don't edit these by hand. Change `photos/site.json` or the HTML in
 
 1. Export a full-size JPEG (or TIFF/PNG) from your editor into `photos/source/`.
    This folder is git-ignored: originals stay on your Mac or Pi, never on GitHub.
+   Full-size originals copied from the Pi (`/Volumes/RAID0`) live in `photos/source/full/`;
+   `photos/source/originals-needed.txt` lists photos still on small exports.
 2. Add an entry to `photos/site.json` (`slug`, `file`, `title`, `collection`,
    `alt`, optional `caption`, `species`, `place`, `date`, `camera`, `lens`,
    `settings`, `print_url`, `license_url`, and `focus`: the subject's position
