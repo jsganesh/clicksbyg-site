@@ -123,13 +123,25 @@ def build_collections(d):
             og_image=f"/img/{c['cover']}-1280.jpg", url=f"/collections/{c['slug']}/"))
 
 
-def pager(seq, p):
+def neighbours(seq, p):
     i = seq.index(p)
-    prev_p = seq[i - 1] if i > 0 else None
-    next_p = seq[i + 1] if i < len(seq) - 1 else None
+    return (seq[i - 1] if i > 0 else None), (seq[i + 1] if i < len(seq) - 1 else None)
+
+
+def pager(seq, p):
+    prev_p, next_p = neighbours(seq, p)
     left = f'<a rel="prev" href="/photo/{prev_p["slug"]}/">← {e(prev_p["title"])}</a>' if prev_p else "<span></span>"
     right = f'<a rel="next" href="/photo/{next_p["slug"]}/">{e(next_p["title"])} →</a>' if next_p else "<span></span>"
     return left + right
+
+
+def photo_arrows(seq, p):
+    """Arrow links over the photo itself; the pager below stays as the labelled version."""
+    prev_p, next_p = neighbours(seq, p)
+    return "".join(
+        f'<a class="photo-nav {cls}" href="/photo/{n["slug"]}/" aria-label="{label}: {e(n["title"])}">'
+        f'<span aria-hidden="true">{arrow}</span></a>'
+        for n, cls, label, arrow in ((prev_p, "prev", "Previous photo", "‹"), (next_p, "next", "Next photo", "›")) if n)
 
 
 def build_photo(d, p, coll_titles):
@@ -145,7 +157,7 @@ def build_photo(d, p, coll_titles):
         caption=f"<p>{e(p['caption'])}</p>" if p.get("caption") else "",
         print_href=e(p.get("print_url") or enquire_href(site, f"Print: {p['title']}", PRINT_FORM, ref)),
         license_href=e(p.get("license_url") or enquire_href(site, f"Licence: {p['title']}", LICENSE_FORM, ref)),
-        pager=pager(d["by_coll"][p["collection"]], p))
+        pager=pager(d["by_coll"][p["collection"]], p), arrows=photo_arrows(d["by_coll"][p["collection"]], p))
     write(ROOT / "photo" / p["slug"] / "index.html", page(
         site, e(seo.photo_title(site, p, d["shared"])), seo.photo_desc(p), body,
         og_image=f"/img/{p['slug']}-1280.jpg", body_class="photo-page", url=f"/photo/{p['slug']}/",

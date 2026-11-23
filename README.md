@@ -43,6 +43,7 @@ Don't edit these by hand. Change `photos/site.json` or the HTML in
 3. Run `python3 tools/publish.py` (needs Pillow: `pip install -r requirements.txt`).
 4. Run `python3 tools/check_site.py`: it checks metadata is stripped and
    every link and image resolves.
+   If you change `assets/gallery.js`, also run `node tools/swipe_test.js assets/gallery.js`.
 5. Preview, then commit and push.
 
 `print_url` / `license_url` can be a Stripe Payment Link, a Lemon Squeezy or
