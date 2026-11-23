@@ -13,8 +13,8 @@ the photo pages are generated locally and committed.
   `ships_to`, and an unframed and framed price per size), with a pre-filled order
   email per photo and a quote email for anything else. New Zealand orders pay by
   bank transfer after you reply. Overseas orders email for a delivered price; reply
-  with the total including packaging and postage and a Shopify payment link
-  (a draft order's invoice link works). A bad price stops the build.
+  with the total including packaging and postage as a PayPal invoice (until
+  the Shopify store is live). A bad price stops the build.
 - `img/`: web copies (640/1280/2048 px, WebP + JPEG). Camera metadata and GPS are
   stripped; only artist and copyright are written in.
 
