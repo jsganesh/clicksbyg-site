@@ -5,6 +5,7 @@
    applies camera rotation and never upscales, tested on a synthetic export in a temp folder.
 2. Every internal link and image on every page resolves to a file, and every
    generated page carries the CSP and no inline styles (which the CSP blocks).
+3. Photo arrows lead to the same photos as the pager below them.
 """
 import html
 import json
@@ -96,6 +97,7 @@ def check_pages():
             check(" style=" not in text, f"{rel}: inline style blocked by CSP")
         if rel.parts[0] == "photo":
             check_licensable(rel, text)
+            check_arrows(rel, text)
         check('rel="icon"' in text, f"{rel}: no favicon link")
         if "noindex" not in text:
             check_search_text(rel, text)
@@ -112,6 +114,14 @@ def check_search_text(rel, text):
     # Measured unescaped: "&amp;" is one character to a reader.
     length = len(html.unescape(desc.group(1))) if desc else 0
     check(0 < length <= seo.DESC_LIMIT, f"{rel}: description is {length} characters")
+
+
+def check_arrows(rel, text):
+    """The arrows on the photo must lead where the pager below does."""
+    for side in ("prev", "next"):
+        arrow = re.search(rf'class="photo-nav {side}" href="([^"]+)"', text)
+        pager = re.search(rf'rel="{side}" href="([^"]+)"', text)
+        check((arrow and arrow.group(1)) == (pager and pager.group(1)), f"{rel}: {side} arrow doesn't match the pager")
 
 
 def check_licensable(rel, text):
