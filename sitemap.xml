@@ -2,18 +2,151 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url><loc>https://clicksbyg.com/about/</loc></url>
   <url><loc>https://clicksbyg.com/apps/</loc></url>
+  <url><loc>https://clicksbyg.com/collections/astro/</loc></url>
   <url><loc>https://clicksbyg.com/collections/birds/</loc></url>
+  <url><loc>https://clicksbyg.com/collections/cityscapes/</loc></url>
+  <url><loc>https://clicksbyg.com/collections/fireworks/</loc></url>
+  <url><loc>https://clicksbyg.com/collections/flowers/</loc></url>
   <url><loc>https://clicksbyg.com/collections/</loc></url>
+  <url><loc>https://clicksbyg.com/collections/insects/</loc></url>
+  <url><loc>https://clicksbyg.com/collections/landscapes/</loc></url>
+  <url><loc>https://clicksbyg.com/collections/others/</loc></url>
+  <url><loc>https://clicksbyg.com/collections/wildlife/</loc></url>
   <url><loc>https://clicksbyg.com/contact/</loc></url>
   <url><loc>https://clicksbyg.com/</loc></url>
   <url><loc>https://clicksbyg.com/licensing/</loc></url>
   <url><loc>https://clicksbyg.com/philatally/</loc></url>
   <url><loc>https://clicksbyg.com/philatally/privacy/</loc></url>
   <url><loc>https://clicksbyg.com/philatally/support/</loc></url>
+  <url><loc>https://clicksbyg.com/photo/albatross-on-the-water/</loc><image:image><image:loc>https://clicksbyg.com/img/albatross-on-the-water-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/albatross-over-the-ranges/</loc><image:image><image:loc>https://clicksbyg.com/img/albatross-over-the-ranges-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/auckland-waterfront-at-dusk/</loc><image:image><image:loc>https://clicksbyg.com/img/auckland-waterfront-at-dusk-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/autumn-pond-with-ducks/</loc><image:image><image:loc>https://clicksbyg.com/img/autumn-pond-with-ducks-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/banded-dotterel-in-flight/</loc><image:image><image:loc>https://clicksbyg.com/img/banded-dotterel-in-flight-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/basilica-nave-and-mosaics/</loc><image:image><image:loc>https://clicksbyg.com/img/basilica-nave-and-mosaics-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/bella-sky-towers/</loc><image:image><image:loc>https://clicksbyg.com/img/bella-sky-towers-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/bellbird-in-the-flax/</loc><image:image><image:loc>https://clicksbyg.com/img/bellbird-in-the-flax-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/blue-and-gold-bursts/</loc><image:image><image:loc>https://clicksbyg.com/img/blue-and-gold-bursts-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/blue-jay-in-the-treetops/</loc><image:image><image:loc>https://clicksbyg.com/img/blue-jay-in-the-treetops-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/blue-jay-with-a-twig/</loc><image:image><image:loc>https://clicksbyg.com/img/blue-jay-with-a-twig-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/bluebird-on-a-post/</loc><image:image><image:loc>https://clicksbyg.com/img/bluebird-on-a-post-2048.jpg</image:loc></image:image></url>
   <url><loc>https://clicksbyg.com/photo/brahminy-kite-face-on/</loc><image:image><image:loc>https://clicksbyg.com/img/brahminy-kite-face-on-2048.jpg</image:loc></image:image></url>
   <url><loc>https://clicksbyg.com/photo/brahminy-kite-ruffled/</loc><image:image><image:loc>https://clicksbyg.com/img/brahminy-kite-ruffled-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/bumblebee-heading-for-the-flax/</loc><image:image><image:loc>https://clicksbyg.com/img/bumblebee-heading-for-the-flax-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/cardinal-in-the-bare-branches/</loc><image:image><image:loc>https://clicksbyg.com/img/cardinal-in-the-bare-branches-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/cardinal-on-the-fence/</loc><image:image><image:loc>https://clicksbyg.com/img/cardinal-on-the-fence-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/caspian-tern-in-flight/</loc><image:image><image:loc>https://clicksbyg.com/img/caspian-tern-in-flight-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/city-through-the-glass/</loc><image:image><image:loc>https://clicksbyg.com/img/city-through-the-glass-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/coot-chick-out-for-a-swim/</loc><image:image><image:loc>https://clicksbyg.com/img/coot-chick-out-for-a-swim-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/crested-grebes-courting/</loc><image:image><image:loc>https://clicksbyg.com/img/crested-grebes-courting-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/crested-grebes-in-a-heart/</loc><image:image><image:loc>https://clicksbyg.com/img/crested-grebes-in-a-heart-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/dabchick-face-on/</loc><image:image><image:loc>https://clicksbyg.com/img/dabchick-face-on-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/dabchick-on-the-pond/</loc><image:image><image:loc>https://clicksbyg.com/img/dabchick-on-the-pond-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/daffodils-in-the-sun/</loc><image:image><image:loc>https://clicksbyg.com/img/daffodils-in-the-sun-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/damselflies-over-the-water/</loc><image:image><image:loc>https://clicksbyg.com/img/damselflies-over-the-water-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/damselfly-and-its-reflection/</loc><image:image><image:loc>https://clicksbyg.com/img/damselfly-and-its-reflection-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/damselfly-at-the-surface/</loc><image:image><image:loc>https://clicksbyg.com/img/damselfly-at-the-surface-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/damselfly-mirrored/</loc><image:image><image:loc>https://clicksbyg.com/img/damselfly-mirrored-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/damselfly-on-a-reed-stem/</loc><image:image><image:loc>https://clicksbyg.com/img/damselfly-on-a-reed-stem-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/dragonfly-in-flight/</loc><image:image><image:loc>https://clicksbyg.com/img/dragonfly-in-flight-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/falling-gold/</loc><image:image><image:loc>https://clicksbyg.com/img/falling-gold-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/fantail-calling/</loc><image:image><image:loc>https://clicksbyg.com/img/fantail-calling-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/fantail-mid-flutter/</loc><image:image><image:loc>https://clicksbyg.com/img/fantail-mid-flutter-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/fireworks-crown/</loc><image:image><image:loc>https://clicksbyg.com/img/fireworks-crown-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/flowering-quince/</loc><image:image><image:loc>https://clicksbyg.com/img/flowering-quince-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/fuchsia-flowers/</loc><image:image><image:loc>https://clicksbyg.com/img/fuchsia-flowers-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/fur-seal-on-the-rocks/</loc><image:image><image:loc>https://clicksbyg.com/img/fur-seal-on-the-rocks-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/fur-seal-pups/</loc><image:image><image:loc>https://clicksbyg.com/img/fur-seal-pups-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/fur-seal-stretching-out/</loc><image:image><image:loc>https://clicksbyg.com/img/fur-seal-stretching-out-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/galactic-core-over-the-hills/</loc><image:image><image:loc>https://clicksbyg.com/img/galactic-core-over-the-hills-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/glittering-curtain/</loc><image:image><image:loc>https://clicksbyg.com/img/glittering-curtain-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/golden-pheasant/</loc><image:image><image:loc>https://clicksbyg.com/img/golden-pheasant-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/golden-starbursts/</loc><image:image><image:loc>https://clicksbyg.com/img/golden-starbursts-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/golden-willow-fireworks/</loc><image:image><image:loc>https://clicksbyg.com/img/golden-willow-fireworks-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/goldfinch-on-a-grass-stem/</loc><image:image><image:loc>https://clicksbyg.com/img/goldfinch-on-a-grass-stem-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/grebe-in-display/</loc><image:image><image:loc>https://clicksbyg.com/img/grebe-in-display-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/grebe-stretching-its-wings/</loc><image:image><image:loc>https://clicksbyg.com/img/grebe-stretching-its-wings-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/green-fireworks/</loc><image:image><image:loc>https://clicksbyg.com/img/green-fireworks-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/grundtvigs-church/</loc><image:image><image:loc>https://clicksbyg.com/img/grundtvigs-church-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/guanyin-in-lamplight/</loc><image:image><image:loc>https://clicksbyg.com/img/guanyin-in-lamplight-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/gull-and-dotterel-in-flight/</loc><image:image><image:loc>https://clicksbyg.com/img/gull-and-dotterel-in-flight-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/gull-bathing-in-the-shallows/</loc><image:image><image:loc>https://clicksbyg.com/img/gull-bathing-in-the-shallows-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/gull-splashing-on-the-lake/</loc><image:image><image:loc>https://clicksbyg.com/img/gull-splashing-on-the-lake-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/harbourside-apartments/</loc><image:image><image:loc>https://clicksbyg.com/img/harbourside-apartments-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/harbourside-at-dusk/</loc><image:image><image:loc>https://clicksbyg.com/img/harbourside-at-dusk-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/hellebore-in-purple/</loc><image:image><image:loc>https://clicksbyg.com/img/hellebore-in-purple-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/heritage-facade-in-rainbow-light/</loc><image:image><image:loc>https://clicksbyg.com/img/heritage-facade-in-rainbow-light-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/hoiho-coming-ashore/</loc><image:image><image:loc>https://clicksbyg.com/img/hoiho-coming-ashore-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/hoiho-stretching-its-flippers/</loc><image:image><image:loc>https://clicksbyg.com/img/hoiho-stretching-its-flippers-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/holey-moley-reflections/</loc><image:image><image:loc>https://clicksbyg.com/img/holey-moley-reflections-2048.jpg</image:loc></image:image></url>
   <url><loc>https://clicksbyg.com/photo/hoopoe-in-the-canopy/</loc><image:image><image:loc>https://clicksbyg.com/img/hoopoe-in-the-canopy-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/kakariki-on-the-rail/</loc><image:image><image:loc>https://clicksbyg.com/img/kakariki-on-the-rail-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/kereru-in-the-willow/</loc><image:image><image:loc>https://clicksbyg.com/img/kereru-in-the-willow-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/kingfisher-calling/</loc><image:image><image:loc>https://clicksbyg.com/img/kingfisher-calling-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/kingfisher-in-golden-light/</loc><image:image><image:loc>https://clicksbyg.com/img/kingfisher-in-golden-light-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/kingfisher-looking-back/</loc><image:image><image:loc>https://clicksbyg.com/img/kingfisher-looking-back-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/kingfisher-with-its-catch/</loc><image:image><image:loc>https://clicksbyg.com/img/kingfisher-with-its-catch-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/kotuku-hunting/</loc><image:image><image:loc>https://clicksbyg.com/img/kotuku-hunting-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/kotuku-on-the-mudflat/</loc><image:image><image:loc>https://clicksbyg.com/img/kotuku-on-the-mudflat-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/library-by-the-sea/</loc><image:image><image:loc>https://clicksbyg.com/img/library-by-the-sea-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/library-facade/</loc><image:image><image:loc>https://clicksbyg.com/img/library-facade-2048.jpg</image:loc></image:image></url>
   <url><loc>https://clicksbyg.com/photo/little-egret-still-water/</loc><image:image><image:loc>https://clicksbyg.com/img/little-egret-still-water-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/little-egret-taking-off/</loc><image:image><image:loc>https://clicksbyg.com/img/little-egret-taking-off-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/mallard-drake/</loc><image:image><image:loc>https://clicksbyg.com/img/mallard-drake-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/manuka-blossom/</loc><image:image><image:loc>https://clicksbyg.com/img/manuka-blossom-2048.jpg</image:loc></image:image></url>
   <url><loc>https://clicksbyg.com/photo/marsh-sandpiper-morning/</loc><image:image><image:loc>https://clicksbyg.com/img/marsh-sandpiper-morning-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/milky-way-above-a-farm-fence/</loc><image:image><image:loc>https://clicksbyg.com/img/milky-way-above-a-farm-fence-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/milky-way-over-a-mountain-tarn/</loc><image:image><image:loc>https://clicksbyg.com/img/milky-way-over-a-mountain-tarn-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/milky-way-over-snowy-ridge/</loc><image:image><image:loc>https://clicksbyg.com/img/milky-way-over-snowy-ridge-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/milky-way-standing-tall/</loc><image:image><image:loc>https://clicksbyg.com/img/milky-way-standing-tall-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/mosaic-arches/</loc><image:image><image:loc>https://clicksbyg.com/img/mosaic-arches-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/mosaic-domes/</loc><image:image><image:loc>https://clicksbyg.com/img/mosaic-domes-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/new-brighton-pier-at-sunrise/</loc><image:image><image:loc>https://clicksbyg.com/img/new-brighton-pier-at-sunrise-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/nikolaj-spire-over-the-canal/</loc><image:image><image:loc>https://clicksbyg.com/img/nikolaj-spire-over-the-canal-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/orange-fireworks/</loc><image:image><image:loc>https://clicksbyg.com/img/orange-fireworks-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/paradise-shelduck-female/</loc><image:image><image:loc>https://clicksbyg.com/img/paradise-shelduck-female-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/paradise-shelduck-male/</loc><image:image><image:loc>https://clicksbyg.com/img/paradise-shelduck-male-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/pied-stilts-reflected/</loc><image:image><image:loc>https://clicksbyg.com/img/pied-stilts-reflected-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/plumes-in-the-wind/</loc><image:image><image:loc>https://clicksbyg.com/img/plumes-in-the-wind-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/red-and-gold-fireworks/</loc><image:image><image:loc>https://clicksbyg.com/img/red-and-gold-fireworks-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/red-bellied-woodpecker/</loc><image:image><image:loc>https://clicksbyg.com/img/red-bellied-woodpecker-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/red-damselfly-on-a-buttercup/</loc><image:image><image:loc>https://clicksbyg.com/img/red-damselfly-on-a-buttercup-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/red-fireworks-in-bloom/</loc><image:image><image:loc>https://clicksbyg.com/img/red-fireworks-in-bloom-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/red-shouldered-hawk/</loc><image:image><image:loc>https://clicksbyg.com/img/red-shouldered-hawk-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/robin-on-the-hedge/</loc><image:image><image:loc>https://clicksbyg.com/img/robin-on-the-hedge-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/robin-up-close/</loc><image:image><image:loc>https://clicksbyg.com/img/robin-up-close-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/roe-deer-in-the-grass/</loc><image:image><image:loc>https://clicksbyg.com/img/roe-deer-in-the-grass-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/rusted-car-at-low-tide/</loc><image:image><image:loc>https://clicksbyg.com/img/rusted-car-at-low-tide-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/rusted-car-on-the-flats/</loc><image:image><image:loc>https://clicksbyg.com/img/rusted-car-on-the-flats-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/salvins-albatross-at-rest/</loc><image:image><image:loc>https://clicksbyg.com/img/salvins-albatross-at-rest-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/ship-at-sunrise/</loc><image:image><image:loc>https://clicksbyg.com/img/ship-at-sunrise-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/shop-window-reflections/</loc><image:image><image:loc>https://clicksbyg.com/img/shop-window-reflections-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/shoveler-drake/</loc><image:image><image:loc>https://clicksbyg.com/img/shoveler-drake-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/silvereye-on-flax/</loc><image:image><image:loc>https://clicksbyg.com/img/silvereye-on-flax-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/silvereyes-keeping-warm/</loc><image:image><image:loc>https://clicksbyg.com/img/silvereyes-keeping-warm-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/small-bird-taking-off/</loc><image:image><image:loc>https://clicksbyg.com/img/small-bird-taking-off-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/spiral-spire-of-our-saviours/</loc><image:image><image:loc>https://clicksbyg.com/img/spiral-spire-of-our-saviours-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/starling-on-flax-flowers/</loc><image:image><image:loc>https://clicksbyg.com/img/starling-on-flax-flowers-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/street-mural-in-black-and-white/</loc><image:image><image:loc>https://clicksbyg.com/img/street-mural-in-black-and-white-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/swallow-feeding-its-young/</loc><image:image><image:loc>https://clicksbyg.com/img/swallow-feeding-its-young-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/tern-landing-with-its-catch/</loc><image:image><image:loc>https://clicksbyg.com/img/tern-landing-with-its-catch-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/terns-squabbling/</loc><image:image><image:loc>https://clicksbyg.com/img/terns-squabbling-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/the-long-nave/</loc><image:image><image:loc>https://clicksbyg.com/img/the-long-nave-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/under-new-brighton-pier/</loc><image:image><image:loc>https://clicksbyg.com/img/under-new-brighton-pier-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/violet-and-red-fireworks/</loc><image:image><image:loc>https://clicksbyg.com/img/violet-and-red-fireworks-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/wave-on-the-rocks/</loc><image:image><image:loc>https://clicksbyg.com/img/wave-on-the-rocks-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/welcome-swallow-fluffed-up/</loc><image:image><image:loc>https://clicksbyg.com/img/welcome-swallow-fluffed-up-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/welcome-swallow-in-song/</loc><image:image><image:loc>https://clicksbyg.com/img/welcome-swallow-in-song-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/welcome-swallow-in-the-reeds/</loc><image:image><image:loc>https://clicksbyg.com/img/welcome-swallow-in-the-reeds-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/welcome-swallow-on-a-perch/</loc><image:image><image:loc>https://clicksbyg.com/img/welcome-swallow-on-a-perch-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/white-faced-heron-shaking-off/</loc><image:image><image:loc>https://clicksbyg.com/img/white-faced-heron-shaking-off-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/white-faced-heron-with-a-crab/</loc><image:image><image:loc>https://clicksbyg.com/img/white-faced-heron-with-a-crab-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/white-fronted-tern-resting/</loc><image:image><image:loc>https://clicksbyg.com/img/white-fronted-tern-resting-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/white-fronted-terns-sharing-a-fish/</loc><image:image><image:loc>https://clicksbyg.com/img/white-fronted-terns-sharing-a-fish-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/wrybill-head-on/</loc><image:image><image:loc>https://clicksbyg.com/img/wrybill-head-on-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/wrybill-on-the-tideline/</loc><image:image><image:loc>https://clicksbyg.com/img/wrybill-on-the-tideline-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/wrybill-preening/</loc><image:image><image:loc>https://clicksbyg.com/img/wrybill-preening-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/yellowhammer-on-a-post/</loc><image:image><image:loc>https://clicksbyg.com/img/yellowhammer-on-a-post-2048.jpg</image:loc></image:image></url>
+  <url><loc>https://clicksbyg.com/photo/young-shag-drying-off/</loc><image:image><image:loc>https://clicksbyg.com/img/young-shag-drying-off-2048.jpg</image:loc></image:image></url>
   <url><loc>https://clicksbyg.com/stampalbum-pro/</loc></url>
 </urlset>
