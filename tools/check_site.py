@@ -5,7 +5,6 @@
    applies camera rotation and never upscales, tested on a synthetic export in a temp folder.
 2. Every internal link and image on every page resolves to a file, and every
    generated page carries the CSP and no inline styles (which the CSP blocks).
-3. Print prices are validated and the prints page offers every photo.
 """
 import html
 import json
@@ -13,17 +12,15 @@ import re
 import sys
 import tempfile
 from pathlib import Path
-from urllib.parse import quote
 
 from PIL import Image
 
 from images import COPYRIGHT, WIDTHS, credit_exif, encode, outputs
-import prints
 import seo
 from publish import FOCUS, HANDLE, visible_collections
 
 ROOT = Path(__file__).resolve().parent.parent
-GENERATED = ("index.html", "404.html", "about", "collections", "licensing", "contact", "photo", "prints")
+GENERATED = ("index.html", "404.html", "about", "collections", "licensing", "contact", "photo")
 SKIP_DIRS = {".git", ".claude", "tools", "photos", "node_modules"}
 failures = []
 
@@ -74,26 +71,6 @@ def check_handle():
     check(HANDLE.fullmatch("clicks.by_g"), "valid Instagram handle rejected")
     for bad in ("@clicks.by_g", "instagram.com/clicks.by_g", 'x"><script>', ""):
         check(not HANDLE.fullmatch(bad), f"Instagram handle {bad!r} wrongly accepted")
-
-
-def check_prints():
-    size = {"name": "20 × 30 cm", "unframed": 45, "framed": 95}
-    good = {"currency": "NZD", "ships_to": "New Zealand", "sizes": [size]}
-    check(prints.validate(good) is None, "valid print prices rejected")
-    for bad in ({**good, "currency": "nzd"}, {**good, "sizes": []},
-                {**good, "sizes": [{**size, "framed": 0}]}, {**good, "sizes": [{**size, "framed": "95"}]},
-                {**good, "sizes": [{**size, "framed": True}]}, {**good, "sizes": [{"name": "A4"}]}):
-        check(prints.validate(bad) is not None, f"bad print prices accepted: {bad}")
-    form = prints.order_form(good)
-    check("Photo: {photo}" in form and "20 × 30 cm" in form, "order email misses the photo or sizes")
-    abroad = prints.order_form(good, overseas=True)
-    check("Country:" in abroad and "New Zealand" not in abroad, "overseas order email doesn't ask for the country")
-    data = json.loads((ROOT / "photos" / "site.json").read_text())
-    text = (ROOT / "prints" / "index.html").read_text()
-    for photo in data["photos"]:
-        check(f'id="{photo["slug"]}"' in text, f"prints page has no order button for {photo['slug']}")
-        check(quote(f"Overseas print order: {photo['title']}") in text,
-              f"prints page has no overseas order link for {photo['slug']}")
 
 
 def site_pages():
@@ -162,7 +139,6 @@ if __name__ == "__main__":
     check_collections()
     check_focus()
     check_handle()
-    check_prints()
     check_pages()
     check_sitemap()
     print("\n".join(failures) or f"ok: encoding and {sum(1 for _ in site_pages())} pages checked")

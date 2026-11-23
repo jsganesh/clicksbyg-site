@@ -16,15 +16,6 @@
       "Every photograph here is available as a fine-art print or for licensing. If you'd like one on your wall, or in your project, get in touch."
     ]
   },
-  "prints": {
-    "currency": "NZD",
-    "ships_to": "New Zealand",
-    "sizes": [
-      { "name": "20 × 30 cm", "unframed": 45, "framed": 95 },
-      { "name": "30 × 45 cm", "unframed": 75, "framed": 145 },
-      { "name": "40 × 60 cm", "unframed": 110, "framed": 210 }
-    ]
-  },
   "collections": [
     {
       "slug": "birds",

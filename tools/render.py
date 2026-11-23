@@ -9,7 +9,7 @@ from urllib.parse import quote
 from images import picture
 
 TEMPLATES = Path(__file__).resolve().parent / "templates"
-NAV = (("/collections/", "Collections"), ("/prints/", "Buy a print"), ("/about/", "About"),
+NAV = (("/collections/", "Collections"), ("/about/", "About"),
        ("/licensing/", "Prints &amp; licensing"), ("/contact/", "Contact"), ("/apps/", "Apps"))
 # GitHub Pages can't send headers, so the policy rides in a meta tag.
 CSP = ("default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; "
