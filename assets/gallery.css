@@ -188,3 +188,17 @@ h2 { font-size: 1.5rem; margin: 2em 0 0.5em; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; }
 }
+
+/* Buy a print */
+.pr-steps { padding-left: 1.2rem; }
+.pr-steps li { margin-bottom: 0.4rem; }
+.pr-prices { border-collapse: collapse; width: 100%; max-width: 30rem; font-variant-numeric: tabular-nums; }
+.pr-prices caption { text-align: left; color: var(--muted); font-size: 0.88rem; padding-bottom: 0.5rem; }
+.pr-prices th, .pr-prices td { text-align: left; padding: 0.55rem 0.8rem 0.55rem 0; border-bottom: 1px solid var(--rule); }
+.pr-prices thead th { color: var(--muted); font: 600 0.78rem/1 var(--sans); letter-spacing: 0.1em; text-transform: uppercase; }
+.pr-prices tbody th { font-weight: 400; }
+.pr-grid { list-style: none; margin: 0; padding: 0; display: grid; gap: 2rem 1.5rem; grid-template-columns: 1fr; }
+@media (min-width: 560px) { .pr-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .pr-grid { grid-template-columns: repeat(3, 1fr); } }
+.pr-card h3 { font: 500 1.25rem/1.25 var(--serif); margin: 0.8rem 0 0.7rem; }
+.pr-img img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; object-position: var(--focus, 50% 50%); border-radius: 2px; background-color: var(--ph, var(--surface)); }

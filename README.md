@@ -9,6 +9,10 @@ the photo pages are generated locally and committed.
 - `/`: home, with hero, collections and recent work
 - `/collections/`, `/collections/<slug>/`, `/photo/<slug>/`
 - `/about/`, `/licensing/`, `/contact/` (pre-filled licence and print request emails)
+- `/prints/`: sizes and prices from `prints` in `photos/site.json` (currency,
+  `ships_to`, and an unframed and framed price per size), with a pre-filled order
+  email per photo and a quote email for anything else. Payment is by bank transfer
+  after you reply. A bad price stops the build.
 - `img/`: web copies (640/1280/2048 px, WebP + JPEG). Camera metadata and GPS are
   stripped; only artist and copyright are written in.
 
@@ -43,8 +47,9 @@ Don't edit these by hand. Change `photos/site.json` or the HTML in
 5. Preview, then commit and push.
 
 `print_url` / `license_url` can be a Stripe Payment Link, a Lemon Squeezy or
-Gumroad product, or a print-on-demand shop page. Without them, the buttons
-email `site.contact_email`, or go to `/licensing/` if no email is set.
+Gumroad product, or a print-on-demand shop page. Without them, "Buy a print"
+goes to the photo on `/prints/`, and "License this image" emails
+`site.contact_email` (or goes to `/licensing/` if no email is set).
 
 ## App pages (hand-written)
 
