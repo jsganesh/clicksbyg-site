@@ -697,7 +697,7 @@
     },
     {
       "slug": "cardinal-in-the-bare-branches",
-      "file": "birds/JSG05248_DxO.JPG",
+      "file": "full/birds/JSG05248_DxO.jpg",
       "title": "Splash of red",
       "collection": "birds",
       "alt": "A male northern cardinal in a tangle of bare winter branches",
@@ -710,7 +710,7 @@
     },
     {
       "slug": "bluebird-on-a-post",
-      "file": "birds/JSG05002_1_DxO.JPG",
+      "file": "full/birds/JSG05002_1_DxO.jpg",
       "title": "Feeling blue",
       "collection": "birds",
       "alt": "An eastern bluebird with a blue back and rusty breast perched on a post against a warm autumn background",
@@ -723,7 +723,7 @@
     },
     {
       "slug": "red-bellied-woodpecker",
-      "file": "birds/JSG05057_1_DxO.JPG",
+      "file": "full/birds/JSG05057_1_DxO.jpg",
       "title": "Dressed for winter",
       "collection": "birds",
       "alt": "A red-bellied woodpecker with a red cap and black-and-white barred back perched among bare branches",
@@ -736,7 +736,7 @@
     },
     {
       "slug": "red-shouldered-hawk",
-      "file": "birds/JSG05125_DxO-1.JPG",
+      "file": "full/birds/JSG05125_DxO-1.jpg",
       "title": "Watching you watching me",
       "collection": "birds",
       "alt": "A red-shouldered hawk with streaked brown and rufous plumage perched on a bare branch between tree trunks",
@@ -749,7 +749,7 @@
     },
     {
       "slug": "blue-jay-with-a-snake",
-      "file": "birds/JSG05302_DxO.JPG",
+      "file": "full/birds/JSG05302_DxO.jpg",
       "title": "Snake on the menu",
       "collection": "birds",
       "alt": "A blue jay perched on a bare branch against a blue sky, holding a small snake it has caught",
@@ -763,7 +763,7 @@
     },
     {
       "slug": "blue-jay-in-the-treetops",
-      "file": "birds/JSG05444_1_DxO.JPG",
+      "file": "full/birds/JSG05444_1_DxO.jpg",
       "title": "Blue on blue",
       "collection": "birds",
       "alt": "A blue jay on a bare branch against a bright blue sky",
@@ -1011,7 +1011,7 @@
     },
     {
       "slug": "young-little-black-shag",
-      "file": "birds/JSG09346_1_DxO.JPG",
+      "file": "full/birds/JSG09346_1_DxO.tif",
       "title": "Awkward teenage phase",
       "collection": "birds",
       "alt": "A young little black shag with brown-speckled feathers perched on a rock at the water's edge",
@@ -1049,7 +1049,7 @@
     },
     {
       "slug": "roe-deer-in-the-grass",
-      "file": "wildlife/JSG08105_DxO.JPG",
+      "file": "full/wildlife/JSG08105_DxO.tif",
       "title": "Spotted you",
       "collection": "wildlife",
       "alt": "A roe deer buck with short antlers looking out from tall green grass",
@@ -1256,7 +1256,7 @@
     },
     {
       "slug": "bella-sky-towers",
-      "file": "cityscapes/JSG08136_DxO.JPG",
+      "file": "full/cityscapes/JSG08136_DxO.tif",
       "title": "Bella Sky towers",
       "collection": "cityscapes",
       "alt": "The two leaning towers of the Bella Sky hotel with their angular patterned facades against a blue sky",
@@ -1268,7 +1268,7 @@
     },
     {
       "slug": "nikolaj-spire-over-the-canal",
-      "file": "cityscapes/JSG08265_1_DxO.JPG",
+      "file": "full/cityscapes/JSG08265_1_DxO.tif",
       "title": "Nikolaj spire over the canal",
       "collection": "cityscapes",
       "alt": "The green copper spire of St Nicholas Church rising above a canal and old buildings under cloud",
@@ -1280,7 +1280,7 @@
     },
     {
       "slug": "grundtvigs-church",
-      "file": "cityscapes/JSG08562_DxO.JPG",
+      "file": "full/cityscapes/JSG08562_DxO.tif",
       "title": "Grundtvig's Church",
       "collection": "cityscapes",
       "alt": "Grundtvig's Church at the end of a street lined with yellow-brick houses under a stormy sky",
@@ -1292,7 +1292,7 @@
     },
     {
       "slug": "harbourside-apartments",
-      "file": "cityscapes/JSG08581_1_DxO.JPG",
+      "file": "full/cityscapes/JSG08581_1_DxO.tif",
       "title": "Harbourside apartments",
       "collection": "cityscapes",
       "alt": "Modern apartment blocks with sloping rooftops along a harbour promenade",
@@ -1304,7 +1304,7 @@
     },
     {
       "slug": "spiral-spire-of-our-saviours",
-      "file": "cityscapes/JSG08584_1_DxO.JPG",
+      "file": "full/cityscapes/JSG08584_1_DxO.tif",
       "title": "Spiral spire of Our Saviour's",
       "collection": "cityscapes",
       "alt": "The black-and-gold spiral spire of the Church of Our Saviour above colourful rooftops and trees",
@@ -1449,7 +1449,7 @@
     },
     {
       "slug": "golden-starbursts",
-      "file": "fireworks/JSG07502_DxO.JPG",
+      "file": "full/fireworks/JSG07502_DxO.tif",
       "title": "Golden starbursts",
       "collection": "fireworks",
       "alt": "A row of golden firework starbursts above rising trails against a black sky",
@@ -1460,7 +1460,7 @@
     },
     {
       "slug": "red-fireworks-in-bloom",
-      "file": "fireworks/JSG07504_1_DxO.JPG",
+      "file": "full/fireworks/JSG07504_1_DxO.tif",
       "title": "Red fireworks in bloom",
       "collection": "fireworks",
       "alt": "A line of red firework bursts blooming across a black sky",
@@ -1471,7 +1471,7 @@
     },
     {
       "slug": "fireworks-crown",
-      "file": "fireworks/JSG07554_1_DxO.JPG",
+      "file": "full/fireworks/JSG07554_1_DxO.tif",
       "title": "Fireworks crown",
       "collection": "fireworks",
       "alt": "Two gold starbursts above a crown-shaped fan of orange firework trails",
@@ -1482,7 +1482,7 @@
     },
     {
       "slug": "falling-gold",
-      "file": "fireworks/JSG07556_1_DxO.JPG",
+      "file": "full/fireworks/JSG07556_1_DxO.tif",
       "title": "Falling gold",
       "collection": "fireworks",
       "alt": "A cascade of golden firework trails falling through drifting smoke",
@@ -1493,7 +1493,7 @@
     },
     {
       "slug": "blue-and-gold-bursts",
-      "file": "fireworks/JSG07582_1_DxO.JPG",
+      "file": "full/fireworks/JSG07582_1_DxO.tif",
       "title": "Blue and gold bursts",
       "collection": "fireworks",
       "alt": "Blue, pink and gold fireworks bursting together against a black sky",
@@ -1504,7 +1504,7 @@
     },
     {
       "slug": "green-fireworks",
-      "file": "fireworks/JSG07585_1_DxO.JPG",
+      "file": "full/fireworks/JSG07585_1_DxO.tif",
       "title": "Green fireworks",
       "collection": "fireworks",
       "alt": "A large green firework burst beside blue and gold ones in a dark sky",
@@ -1515,7 +1515,7 @@
     },
     {
       "slug": "red-and-gold-fireworks",
-      "file": "fireworks/JSG07595_1_DxO.JPG",
+      "file": "full/fireworks/JSG07595_1_DxO.tif",
       "title": "Red and gold fireworks",
       "collection": "fireworks",
       "alt": "Overlapping red and gold firework bursts filling the sky above glowing smoke",
@@ -1526,7 +1526,7 @@
     },
     {
       "slug": "orange-fireworks",
-      "file": "fireworks/JSG07605_1_DxO.JPG",
+      "file": "full/fireworks/JSG07605_1_DxO.tif",
       "title": "Orange fireworks",
       "collection": "fireworks",
       "alt": "Orange and white firework bursts with bright flashes low in the sky",
@@ -1537,7 +1537,7 @@
     },
     {
       "slug": "violet-and-red-fireworks",
-      "file": "fireworks/JSG07620_1_DxO.JPG",
+      "file": "full/fireworks/JSG07620_1_DxO.tif",
       "title": "Violet and red fireworks",
       "collection": "fireworks",
       "alt": "Violet and white firework bursts above a row of red rising trails",
@@ -1548,7 +1548,7 @@
     },
     {
       "slug": "golden-willow-fireworks",
-      "file": "fireworks/JSG07622_1_DxO.JPG",
+      "file": "full/fireworks/JSG07622_1_DxO.tif",
       "title": "Golden willow fireworks",
       "collection": "fireworks",
       "alt": "A huge golden willow firework drooping over a fan of orange trails",
@@ -1559,7 +1559,7 @@
     },
     {
       "slug": "glittering-curtain",
-      "file": "fireworks/JSG07623_1_DxO.JPG",
+      "file": "full/fireworks/JSG07623_1_DxO.tif",
       "title": "Glittering curtain",
       "collection": "fireworks",
       "alt": "A curtain of glittering gold firework trails hanging over red sparks",
