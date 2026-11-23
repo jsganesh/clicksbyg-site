@@ -42,7 +42,7 @@
       "slug": "cityscapes",
       "title": "Cityscapes",
       "blurb": "Streets, skylines and city light.",
-      "cover": "auckland-waterfront-at-dusk",
+      "cover": "auckland-waterfront-at-dawn",
       "kind": "Cityscape"
     },
     {
@@ -196,11 +196,11 @@
       "caption": "Early morning, just before heading out to sea, gathered in a circle as if deep in conversation."
     },
     {
-      "slug": "auckland-waterfront-at-dusk",
+      "slug": "auckland-waterfront-at-dawn",
       "file": "cityscapes/JSG01600_1_DxO.JPG",
-      "title": "Auckland waterfront at dusk",
+      "title": "Auckland waterfront at dawn",
       "collection": "cityscapes",
-      "alt": "Auckland's skyline and Sky Tower at dusk, seen across the harbour from a pier",
+      "alt": "Auckland's skyline and Sky Tower at dawn, seen across the harbour from a pier",
       "place": "Auckland, New Zealand",
       "date": "March 2025",
       "camera": "Sony α6700",
@@ -597,25 +597,12 @@
       "caption": "Black-billed gulls are found only in New Zealand and are among the most threatened gulls in the world."
     },
     {
-      "slug": "kakariki-on-the-rail",
-      "file": "birds/JSG02609_DxO.JPG",
-      "title": "Green with curiosity",
-      "collection": "birds",
-      "alt": "A bright green red-crowned parakeet (kākāriki) perched on a metal rail against leafy green foliage",
-      "species": "Red-crowned parakeet (Cyanoramphus novaezelandiae)",
-      "place": "New Zealand",
-      "date": "March 2025",
-      "camera": "Sony α6700",
-      "lens": "Sony FE 70–300mm F4.5–5.6 G OSS",
-      "settings": "300mm · f/5.6 · 1/2000s · ISO 3200"
-    },
-    {
       "slug": "robin-on-the-hedge",
       "file": "birds/JSG02694_1_DxO.JPG",
       "title": "King of the hedge",
       "collection": "birds",
-      "alt": "A New Zealand robin with dark grey upperparts and a pale belly perched on top of a hedge",
-      "species": "New Zealand robin (Petroica)",
+      "alt": "A South Island robin with dark grey upperparts and a pale belly perched on top of a hedge",
+      "species": "South Island robin (Petroica australis)",
       "place": "New Zealand",
       "date": "November 2025",
       "camera": "Sony α6700",
@@ -627,8 +614,8 @@
       "file": "birds/JSG02711_1_DxO.JPG",
       "title": "Ready for my close-up",
       "collection": "birds",
-      "alt": "A close portrait of a dark grey New Zealand robin with a white belly patch and a bright eye",
-      "species": "New Zealand robin (Petroica)",
+      "alt": "A close portrait of a dark grey South Island robin with a white belly patch and a bright eye",
+      "species": "South Island robin (Petroica australis)",
       "place": "New Zealand",
       "date": "November 2025",
       "camera": "Sony α6700",
@@ -862,41 +849,42 @@
       "settings": "600mm · f/6.3 · 1/3200s · ISO 500"
     },
     {
-      "slug": "dabchick-on-the-pond",
+      "slug": "hoary-headed-grebe-on-the-pond",
       "file": "birds/JSG05275_1_DxO.JPG",
       "title": "Slicked-back look",
       "collection": "birds",
-      "alt": "A New Zealand dabchick with fine silvery streaks on its head swimming on brown water",
-      "species": "New Zealand dabchick (Poliocephalus rufopectus)",
-      "place": "New Zealand",
+      "alt": "A hoary-headed grebe with fine silvery streaks on its head swimming on brown water",
+      "species": "Hoary-headed grebe (Poliocephalus poliocephalus)",
       "date": "May 2025",
       "camera": "Sony α6700",
       "lens": "Sony FE 200–600mm F5.6–6.3 G OSS",
-      "settings": "600mm · f/6.3 · 1/2000s · ISO 1250"
+      "settings": "600mm · f/6.3 · 1/2000s · ISO 1250",
+      "place": "New Zealand"
     },
     {
-      "slug": "dabchick-face-on",
+      "slug": "hoary-headed-grebe-face-on",
       "file": "birds/JSG05350_1_DxO.JPG",
       "title": "Who, me?",
       "collection": "birds",
-      "alt": "A New Zealand dabchick with a chestnut breast swimming straight towards the camera",
-      "species": "New Zealand dabchick (Poliocephalus rufopectus)",
-      "place": "New Zealand",
+      "alt": "A hoary-headed grebe swimming straight towards the camera on brown water",
+      "species": "Hoary-headed grebe (Poliocephalus poliocephalus)",
       "date": "May 2025",
       "camera": "Sony α6700",
       "lens": "Sony FE 200–600mm F5.6–6.3 G OSS",
-      "settings": "600mm · f/6.3 · 1/1000s · ISO 800"
+      "settings": "600mm · f/6.3 · 1/1000s · ISO 800",
+      "place": "New Zealand"
     },
     {
-      "slug": "plumes-in-the-wind",
+      "slug": "royal-spoonbill-windswept",
       "file": "birds/JSG05306_DxO.JPG",
       "title": "Windswept",
       "collection": "birds",
-      "alt": "A white wading bird on a mudflat with its feathers blown up into a crest of plumes, long black legs below",
+      "alt": "A royal spoonbill on a mudflat with its white breeding plumes blown up by the wind, long black legs below",
       "date": "December 2024",
       "camera": "Sony α6700",
       "lens": "Sony FE 200–600mm F5.6–6.3 G OSS",
-      "settings": "600mm · f/6.3 · 1/2500s · ISO 200"
+      "settings": "600mm · f/6.3 · 1/2500s · ISO 200",
+      "species": "Royal spoonbill (Platalea regia)"
     },
     {
       "slug": "shoveler-drake",
@@ -933,18 +921,6 @@
       "camera": "Sony α6700",
       "lens": "Sony FE 200–600mm F5.6–6.3 G OSS",
       "settings": "600mm · f/6.3 · 1/2000s · ISO 500"
-    },
-    {
-      "slug": "little-egret-taking-off",
-      "file": "birds/JSG06125_DxO.JPG",
-      "title": "Take-off",
-      "collection": "birds",
-      "alt": "A white little egret lifting off from shallow water, wings raised and legs trailing",
-      "species": "Little egret (Egretta garzetta)",
-      "date": "January 2025",
-      "camera": "Sony α6700",
-      "lens": "Sony FE 200–600mm F5.6–6.3 G OSS",
-      "settings": "600mm · f/7.1 · 1/2000s · ISO 800"
     },
     {
       "slug": "pied-stilts-reflected",
@@ -1034,27 +1010,16 @@
       "settings": "600mm · f/6.3 · 1/1250s · ISO 2000"
     },
     {
-      "slug": "young-shag-drying-off",
+      "slug": "young-little-black-shag",
       "file": "birds/JSG09346_1_DxO.JPG",
       "title": "Awkward teenage phase",
       "collection": "birds",
-      "alt": "A young brown-speckled shag perched on a rock at the water's edge",
+      "alt": "A young little black shag with brown-speckled feathers perched on a rock at the water's edge",
       "date": "September 2026",
       "camera": "Sony α6700",
       "lens": "Sony FE 200–600mm F5.6–6.3 G OSS",
-      "settings": "600mm · f/6.3 · 1/1000s · ISO 640"
-    },
-    {
-      "slug": "golden-pheasant",
-      "file": "birds/JSG09703_1_DxO.JPG",
-      "title": "Good hair day",
-      "collection": "birds",
-      "alt": "A close-up of a golden pheasant's head, with a bright golden crest and a striped orange-and-black cape",
-      "species": "Golden pheasant (Chrysolophus pictus)",
-      "date": "January 2025",
-      "camera": "Sony α6700",
-      "lens": "Sony FE 70–300mm F4.5–5.6 G OSS",
-      "settings": "300mm · f/5.6 · 1/1600s · ISO 6400"
+      "settings": "600mm · f/6.3 · 1/1000s · ISO 640",
+      "species": "Little black shag (Phalacrocorax sulcirostris)"
     },
     {
       "slug": "fur-seal-on-the-rocks",
@@ -1141,16 +1106,6 @@
       "settings": "24mm · f/10 · 1/640s · ISO 100"
     },
     {
-      "slug": "rusted-car-at-low-tide",
-      "file": "landscapes/IMG_5283.JPEG",
-      "title": "Rusted car at low tide",
-      "collection": "landscapes",
-      "alt": "A burnt-out, rusted car standing in shallow water on a tidal flat, reflected below",
-      "date": "September 2025",
-      "camera": "iPhone 12 Pro",
-      "settings": "6mm · f/2 · 1/2994s · ISO 25"
-    },
-    {
       "slug": "rusted-car-on-the-flats",
       "file": "landscapes/JSG02397_1_DxO.JPG",
       "title": "Rusted car on the flats",
@@ -1186,15 +1141,16 @@
       "place": "Kaikōura, New Zealand"
     },
     {
-      "slug": "harbourside-at-dusk",
+      "slug": "harbourside-at-dawn",
       "file": "cityscapes/JSG01605_1_DxO.JPG",
-      "title": "Harbourside at dusk",
+      "title": "Harbourside at dawn",
       "collection": "cityscapes",
-      "alt": "Waterfront buildings glowing with evening lights and reflected in harbour water under a pink sky",
+      "alt": "Waterfront buildings with their lights still on at dawn, reflected in harbour water under a pink sky",
       "date": "March 2025",
       "camera": "Sony α6700",
       "lens": "Sony FE 24–105mm F4 G OSS",
-      "settings": "54mm · f/6.3 · 1/100s · ISO 6400"
+      "settings": "54mm · f/6.3 · 1/100s · ISO 6400",
+      "place": "Auckland, New Zealand"
     },
     {
       "slug": "heritage-facade-in-rainbow-light",
@@ -1402,17 +1358,6 @@
       "camera": "Sony α6700",
       "lens": "Sony FE 200–600mm F5.6–6.3 G OSS",
       "settings": "600mm · f/11 · 1/320s · ISO 6400"
-    },
-    {
-      "slug": "fuchsia-flowers",
-      "file": "flowers/JSG07971_1_DxO.JPG",
-      "title": "Fuchsia flowers",
-      "collection": "flowers",
-      "alt": "Pink and violet fuchsia flowers hanging beneath green leaves",
-      "date": "August 2025",
-      "camera": "Sony α6700",
-      "lens": "Sony FE 200–600mm F5.6–6.3 G OSS",
-      "settings": "600mm · f/11 · 1/250s · ISO 6400"
     },
     {
       "slug": "damselflies-over-the-water",
