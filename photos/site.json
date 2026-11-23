@@ -871,7 +871,8 @@
       "date": "May 2025",
       "camera": "Sony α6700",
       "lens": "Sony FE 200–600mm F5.6–6.3 G OSS",
-      "settings": "600mm · f/6.3 · 1/2000s · ISO 1250"
+      "settings": "600mm · f/6.3 · 1/2000s · ISO 1250",
+      "place": "Marlborough, New Zealand"
     },
     {
       "slug": "hoary-headed-grebe-face-on",
@@ -883,7 +884,8 @@
       "date": "May 2025",
       "camera": "Sony α6700",
       "lens": "Sony FE 200–600mm F5.6–6.3 G OSS",
-      "settings": "600mm · f/6.3 · 1/1000s · ISO 800"
+      "settings": "600mm · f/6.3 · 1/1000s · ISO 800",
+      "place": "Marlborough, New Zealand"
     },
     {
       "slug": "royal-spoonbill-windswept",
@@ -1033,15 +1035,16 @@
       "settings": "600mm · f/6.3 · 1/1250s · ISO 2000"
     },
     {
-      "slug": "young-shag-drying-off",
+      "slug": "young-little-black-shag",
       "file": "birds/JSG09346_1_DxO.JPG",
       "title": "Awkward teenage phase",
       "collection": "birds",
-      "alt": "A young brown-speckled shag perched on a rock at the water's edge",
+      "alt": "A young little black shag with brown-speckled feathers perched on a rock at the water's edge",
       "date": "September 2026",
       "camera": "Sony α6700",
       "lens": "Sony FE 200–600mm F5.6–6.3 G OSS",
-      "settings": "600mm · f/6.3 · 1/1000s · ISO 640"
+      "settings": "600mm · f/6.3 · 1/1000s · ISO 640",
+      "species": "Little black shag (Phalacrocorax sulcirostris)"
     },
     {
       "slug": "golden-pheasant",
