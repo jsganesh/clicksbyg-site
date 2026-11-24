@@ -90,6 +90,11 @@ main.wrap { padding-top: 3rem; padding-bottom: 4rem; }
 .features li { margin: 0.35rem 0; }
 .shot { margin: 2rem 0; border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; }
 .shot + figcaption, figcaption { color: var(--muted); font-size: 0.9rem; margin-top: -1.3rem; margin-bottom: 2rem; }
+/* Portrait phone screenshots sit side by side; full width, each would fill several screens. */
+.phone-shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin: 2rem 0; }
+.phone-shots figure { margin: 0; }
+.phone-shots .shot { margin: 0 0 0.5rem; border-radius: 18px; width: 100%; height: auto; display: block; }
+.phone-shots figcaption { margin: 0; }
 
 .links { display: flex; flex-wrap: wrap; gap: 0.6rem 1.4rem; padding: 0; list-style: none; }
 
