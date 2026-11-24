@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url><loc>https://clicksbyg.com/about/</loc></url>
   <url><loc>https://clicksbyg.com/apps/</loc></url>
+  <url><loc>https://clicksbyg.com/birdtally/</loc></url>
+  <url><loc>https://clicksbyg.com/birdtally/privacy/</loc></url>
+  <url><loc>https://clicksbyg.com/birdtally/support/</loc></url>
   <url><loc>https://clicksbyg.com/collections/astro/</loc></url>
   <url><loc>https://clicksbyg.com/collections/birds/</loc></url>
   <url><loc>https://clicksbyg.com/collections/cityscapes/</loc></url>
@@ -142,7 +145,4 @@
   <url><loc>https://clicksbyg.com/photo/yellowhammer-on-a-post/</loc><image:image><image:loc>https://clicksbyg.com/img/yellowhammer-on-a-post-2048.jpg</image:loc></image:image></url>
   <url><loc>https://clicksbyg.com/photo/young-little-black-shag/</loc><image:image><image:loc>https://clicksbyg.com/img/young-little-black-shag-2048.jpg</image:loc></image:image></url>
   <url><loc>https://clicksbyg.com/stampalbum-pro/</loc></url>
-  <url><loc>https://clicksbyg.com/birdtally/</loc></url>
-  <url><loc>https://clicksbyg.com/birdtally/privacy/</loc></url>
-  <url><loc>https://clicksbyg.com/birdtally/support/</loc></url>
 </urlset>
